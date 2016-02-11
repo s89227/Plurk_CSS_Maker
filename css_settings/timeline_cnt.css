@@ -1,0 +1,99 @@
+/*plurk河道css語法*/
+
+#timeline_holder{
+  /*固定河道高度 500px,若太低會造成擁擠請自行考量好*/
+  height: 500px !important;
+}
+
+
+/*#timeline_bg 河道背景顏色*/
+#timeline_bg{
+  background-color: #abceff;
+}
+
+#timeline_cnt{
+  /*圖片重疊效果,不用動*/
+  z-index: 600;
+  /*滑鼠游標圖案是 move 雙十字箭頭*/
+  cursor: move;
+  /*絕對位置*/
+  position: absolute;
+  /*河道的寬度比例,100%會以你所使用的顏色或背景做為覆蓋*/
+  width: 100%;
+
+}
+
+
+/*一開始載入河道的最左邊*/
+.block_cnt{
+  /*滑鼠游標圖案是 move 雙十字箭頭*/
+  cursor: move;
+  /*絕對位置*/
+  position: absolute;
+  /*定義絕對高度*/
+  height: 100%!important
+}
+
+.day_start{
+  /*設定字體厚度,bold代表厚*/
+  font-weight: bold;
+}
+
+/*
+.div_inner與.div_bottom
+線條高度,因為#timeline_holder強制500px,所以這邊設定的不會動
+*/
+
+/*高度為500px*/
+.div_inner{
+  height: 366px;
+  /*把此class預設最為最底下,應該是這樣吧!?*/
+  z-index: -1
+}
+
+/*高度一開始為0px*/
+.div_bottom{
+  /*設定如果有文字不會換行*/
+  white-space: nowrap;
+}
+
+/*河道起始位置為面對左邊源向右56px,已.div_one_line為起點*/
+
+.hh_mm{
+  /*把每個河道分成9個220px*/
+  width: 220px;
+}
+
+#bottom_line{
+  /*時間軸下面的底線顏色,預設白色*/
+  background-color: #FFF;
+  /*高度*/
+  height: 2px;
+  /*寬度*/
+  width: 100%;
+  /*滑鼠游標圖案是 move 雙十字箭頭*/
+  cursor: move;
+  /*絕對位置*/
+  position: absolute;
+  /*把此class預設最為最底下,應該是這樣吧!?*/
+  z-index: -100;
+  /*往下移動1px*/
+  bottom: -1px;
+}
+
+/*
+.block_bg與.block_cnt類似,差別在於.block_bg在block_cnt上並且用#timeline_bg的背景顏色來覆蓋,
+*/
+.block_bg{
+  /*預設高度*/
+  height: 100% !important;
+
+}
+
+
+#dynamic_logo{
+  /*原本河道上的logo圖片*/
+  /*src:位置*/
+  /*height: 圖片高度*/
+  <img id="creature" src="//s.plurk.com/62b6a94a6b431abf459ac34f9f0fb617.png" height="180">
+}
