@@ -97,3 +97,43 @@
   /*height: 圖片高度*/
   <img id="creature" src="//s.plurk.com/62b6a94a6b431abf459ac34f9f0fb617.png" height="180">
 }
+
+
+
+/*每個河道上的噗*/
+
+.plurk_cnt{
+  /*圓角*/
+  border-radius: 6px;
+}
+
+
+
+/*
+河道箭頭 right 向右
+
+*/
+.cmp_arrow_right{
+  /*箭頭顏色*/
+  color: #164ae0;
+  /*箭頭大小*/
+  font-size:50px;
+  /*調整在河道中的位置,距離原本位置在往下,越多px越低*/
+  margin-top: ;
+}
+
+.cmp_arrow_left{
+  /*箭頭顏色*/
+  color: #164ae0;
+  /*箭頭大小*/
+  font-size:50px;
+  /*調整在河道中的位置,距離原本位置在往下,越多px越低*/
+  margin-top: ;
+}
+
+/*河道箭頭回到今天*/
+.cmp_back_to_today{
+
+}
+
+/**/
