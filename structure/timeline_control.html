@@ -1,0 +1,84 @@
+<div class="timeline_control">
+	<div id="timeline_control_holder">
+		<!--訊息分類分頁標籤-->
+		<!--icon是用i:before的content寫的-->
+		<ul id="filter_tab">
+			<!--喜歡/轉噗的訊息-->
+			<li>
+				<a id="favorite_plurks_tab_btn" class="off_tab">
+					<i class="pif-like"></i>
+					喜歡/轉噗的訊息
+					<span id="count_favorite_plurks"></span>
+				</a>
+			</li>
+			<!--回應過的訊息-->
+			<li>
+				<a id="responded_plurks_tab_btn" class="off_tab">
+					<i class="pif-message"></i>
+					回應過的訊息
+					<span id="count_responded_plurks"></span>
+				</a>
+			</li>
+			<!--私人訊息-->
+			<li>
+				<a id="private_plurks_tab_btn" class="off_tab">
+					<i class="pif-message-private"></i>
+					私人訊息
+					<span id="count_private_plurks"></span>
+				</a>
+			</li>
+			<!--我發表的訊息-->
+			<li>
+				<a id="own_plurks_tab_btn" class="off_tab">
+					<i class="pif-message-my"></i>
+					我發表的訊息
+					<span id="count_my_plurks"></span>
+				</a>
+			</li>
+			<!--所有訊息-->
+			<li>
+				<a id="all_plurks" class="filter_selected bottom_line_bg">
+					<i class="pif-messages"></i>
+					所有訊息
+					<span id="count_all_plurks"></span>
+				</a>
+			</li>
+		</ul>
+		<!--訊息分類分頁與更新標籤-->
+		<div id="updater">
+			<!--新訊息-->
+			<div id="noti_np" class="item">
+				<a>
+					<span id="noti_np_text" class="text">
+						<i class="pif-message-new"></i>
+						1則新訊息
+					</span>
+				</a>
+			</div>
+			<!--新回應、標為已讀、取消-->
+			<div id="noti_re" class="item">
+				<!--新回應-->
+				<div id="noti_re_view" class="item">
+					<a>
+						<span id="noti_re_text" class="text">
+							<i class="pif-message-new"></i>
+							7則新回應
+						</span>
+					</a>
+				</div>
+				<div id="noti_re_actions" class="item">
+					<!--標為已讀-->
+					<a id="mark_all_link" class="updater_link">
+						<i class="pif-check"></i>
+						<span>全部標記為已讀</span>
+					</a>
+					<!--取消-->
+					<a class="updater_link">
+						<i class="pif-cancel"></i>
+						<span>顯示所有訊息</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
