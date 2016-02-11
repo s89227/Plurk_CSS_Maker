@@ -1,0 +1,92 @@
+/*==========垂直展開訊息分類(在河道左方)==========*/
+#filter_tab,
+#filter_tab a,
+#filter_tab a.off_tab,
+#filter_tab a.off_tab:hover,
+#filter_tab a.filter_selected,
+#filter_tab a.filter_selected:hover{
+  height: 25px;
+  margin-top: 6px;
+  margin-left: 1px;
+  position: relative;}
+  
+/*==========水平展開訊息分類(在河道左方)==========*/
+/*以官方版為基礎修改*/
+#filter_tab li{
+  clear: none;
+  width: auto;
+  margin-right:5px;}
+#filter_tab a{
+  height:25px !important;
+  margin:0 !important;}
+
+/*把更新訊息、新回應移到分類的上面*/
+/*如果想要更新訊息、新回應和分類標籤同一排
+可以不要加上這段*/
+#updater{
+  left: -7px;
+  bottom: 30px;}
+  
+/*以下為小月的修正
+http://www.plurk.com/tsukiari
+*/
+/*可避免標籤蓋在較低的噗上*/
+#timeline_bg{
+  z-index: -1;}
+#timeline_cnt, .timeline_control{
+  z-index: auto;}
+  
+/*==========水平展開訊息分類(在河道右方)==========*/
+/*此為官方提供之寫法*/
+#filter_tab li{
+  clear: none;
+  width: auto;
+  margin-right: 5px;}
+#filter_tab a{
+  height:25px !important;
+  margin:0 !important;}
+.timeline_control{
+  margin-left:0;}
+#timeline_control_holder{
+  width:100%;}
+#updater{
+  left:5px;}
+/*以下為小月的修正
+http://www.plurk.com/tsukiari
+*/
+/*可避免標籤蓋在較低的噗上*/
+#timeline_bg{
+  z-index: -1;}
+#timeline_cnt, .timeline_control{
+  z-index: auto;}
+
+/*==========水平展開訊息分類(在河道右方)(時光機修正)==========*/
+/*原作者 兩羊
+http://www.plurk.com/twosheep0603
+*/
+/*官方釋出的標籤展開+時光機修正*/
+#filter_tab{
+  width: auto;
+  position: absolute;
+  right: 60px;
+  top: -20px;}
+
+#filter_tab a{
+  height: 25px !important;
+  width: auto;
+  margin-top: 0px !important;}
+
+.off_tab.timeMachine{
+  position: absolute;
+  right: -55px;
+  width: auto !important;}
+
+.timeline_control{
+  margin-left:0;}
+
+#timeline_control_holder{
+  width:100%;}
+
+#updater{
+  left:5px;}
+/*標籤展開END*/

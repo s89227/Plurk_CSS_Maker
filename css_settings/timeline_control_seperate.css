@@ -1,0 +1,565 @@
+/*==========訊息分類標籤==========*/
+/***所有訊息***/
+/*平常狀態*/
+  #filter_tab a#all_plurks{
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/
+    /*標籤底色*/
+    background: white;
+    /*文字顏色*/
+    color: black;}
+  /*設定文字顏色後icon會同色
+  如果想要不同色
+  請在--下面--加上下方icon顏色設定*/
+  /*icon*/
+  #filter_tab a#all_plurks i.pif-messages:before{
+    /*改成其他文字圖示*/
+    content : "★";
+    color: green;/*只適用文字型態圖示*/
+    /*改成圖片
+    (圖片大小不能靠CSS調，別用太大張的圖，記得去背)*/
+    content : url('圖片網址');
+    /*移除icon*/
+    content : none;}
+  /*後方的統計數字*/
+  #filter_tab a#all_plurks .unread_generic{
+    /*底色*/
+    background: none !important;
+    /*文字顏色*/
+    color: #fff !important;}
+/*當滑鼠移到上面時*/
+  #filter_tab a#all_plurks:hover{
+    /*按鈕底色*/
+    background: blue;
+    /*文字顏色*/
+    color: green;
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/}
+  /*icon*/
+  #filter_tab a#all_plurks:hover i.pif-messages:before{
+    /*改成其他文字圖示*/
+    content : "★";
+    color: green;/*只適用文字型態圖示*/
+    /*改成圖片
+    (圖片大小不能靠CSS調，別用太大張的圖，記得去背)*/
+    content : url('圖片網址');
+    /*移除icon*/
+    content : none;}
+  /*後方的統計數字*/
+  #filter_tab a#all_plurks:hover .unread_generic{
+    /*底色*/
+    background: none !important;
+    /*文字顏色*/
+    color: #fff !important;}
+  
+/***我發表的訊息***/
+/*平常狀態*/
+  #filter_tab a#own_plurks_tab_btn{
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/
+    /*標籤底色*/
+    background: white;
+    /*文字顏色*/
+    color: black;}
+  /*設定文字顏色後icon會同色
+  如果想要不同色
+  請在--下面--加上下方icon顏色設定*/
+  /*icon*/
+  #filter_tab a#own_plurks_tab_btn i.pif-message-my:before{
+    /*改成其他文字圖示*/
+    content : "★";
+    color: green;/*只適用文字型態圖示*/
+    /*改成圖片
+    (圖片大小不能靠CSS調，別用太大張的圖，記得去背)*/
+    content : url('圖片網址');
+    /*移除icon*/
+    content : none;}
+  /*後方的統計數字*/
+  #filter_tab a#own_plurks_tab_btn .unread_generic{
+    /*底色*/
+    background: none !important;
+    /*文字顏色*/
+    color: #fff !important;}
+/*當滑鼠移到上面時*/
+  #filter_tab a#own_plurks_tab_btn:hover{
+    /*按鈕底色*/
+    background: blue;
+    /*文字顏色*/
+    color: green;
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/}
+  /*icon*/
+  #filter_tab a#own_plurks_tab_btn:hover i.pif-message-my:before{
+    /*改成其他文字圖示*/
+    content : "★";
+    color: green;/*只適用文字型態圖示*/
+    /*改成圖片
+    (圖片大小不能靠CSS調，別用太大張的圖，記得去背)*/
+    content : url('圖片網址');
+    /*移除icon*/
+    content : none;}
+  /*後方的統計數字*/
+  #filter_tab a#own_plurks_tab_btn:hover .unread_generic{
+    /*底色*/
+    background: none !important;
+    /*文字顏色*/
+    color: #fff !important;}
+
+/***私人訊息***/
+/*平常狀態*/
+  #filter_tab a#private_plurks_tab_btn{
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/
+    /*標籤底色*/
+    background: white;
+    /*文字顏色*/
+    color: black;}
+  /*設定文字顏色後icon會同色
+  如果想要不同色
+  請在--下面--加上下方icon顏色設定*/
+  /*icon*/
+  #filter_tab a#private_plurks_tab_btn:hover i.pif-message-private:before{
+    /*改成其他文字圖示*/
+    content : "★";
+    color: green;/*只適用文字型態圖示*/
+    /*改成圖片
+    (圖片大小不能靠CSS調，別用太大張的圖，記得去背)*/
+    content : url('圖片網址');
+    /*移除icon*/
+    content : none;}
+  /*後方的統計數字*/
+  #filter_tab a#private_plurks_tab_btn .unread_generic{
+    /*底色*/
+    background: none !important;
+    /*文字顏色*/
+    color: #fff !important;}
+/*當滑鼠移到上面時*/
+  #filter_tab a#private_plurks_tab_btn:hover{
+    /*按鈕底色*/
+    background: blue;
+    /*文字顏色*/
+    color: green;
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/}
+  /*icon*/
+  #filter_tab a#private_plurks_tab_btn:hover i.pif-message-private:before{
+    /*改成其他文字圖示*/
+    content : "★";
+    color: green;/*只適用文字型態圖示*/
+    /*改成圖片
+    (圖片大小不能靠CSS調，別用太大張的圖，記得去背)*/
+    content : url('圖片網址');
+    /*移除icon*/
+    content : none;}
+  /*後方的統計數字*/
+  #filter_tab a#private_plurks_tab_btn:hover .unread_generic{
+    /*底色*/
+    background: none !important;
+    /*文字顏色*/
+    color: #fff !important;}
+
+/***回應過的訊息***/
+/*平常狀態*/
+  #filter_tab a#responded_plurks_tab_btn{
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/
+    /*標籤底色*/
+    background: white;
+    /*文字顏色*/
+    color: black;}
+  /*設定文字顏色後icon會同色
+  如果想要不同色
+  請在--下面--加上下方icon顏色設定*/
+  /*icon*/
+  #filter_tab a#responded_plurks_tab_btn i.pif-message:before{
+    /*改成其他文字圖示*/
+    content : "★";
+    color: green;/*只適用文字型態圖示*/
+    /*改成圖片
+    (圖片大小不能靠CSS調，別用太大張的圖，記得去背)*/
+    content : url('圖片網址');
+    /*移除icon*/
+    content : none;}
+  /*後方的統計數字*/
+  #filter_tab a#responded_plurks_tab_btn .unread_generic{
+    /*底色*/
+    background: none !important;
+    /*文字顏色*/
+    color: #fff !important;}
+/*當滑鼠移到上面時*/
+  #filter_tab a#responded_plurks_tab_btn:hover{
+    /*按鈕底色*/
+    background: blue;
+    /*文字顏色*/
+    color: green;
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/}
+  /*icon*/
+  #filter_tab a#responded_plurks_tab_btn:hover i.pif-message:before{
+    /*改成其他文字圖示*/
+    content : "★";
+    color: green;/*只適用文字型態圖示*/
+    /*改成圖片
+    (圖片大小不能靠CSS調，別用太大張的圖，記得去背)*/
+    content : url('圖片網址');
+    /*移除icon*/
+    content : none;}
+  /*後方的統計數字*/
+  #filter_tab a#responded_plurks_tab_btn:hover .unread_generic{
+    /*底色*/
+    background: none !important;
+    /*文字顏色*/
+    color: #fff !important;}
+  
+/***喜歡/轉噗的訊息***/
+/*平常狀態*/
+  #filter_tab a#favorite_plurks_tab_btn{
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/
+    /*標籤底色*/
+    background: white;
+    /*文字顏色*/
+    color: black;}
+  /*設定文字顏色後icon會同色
+  如果想要不同色
+  請在--下面--加上下方icon顏色設定*/
+  /*icon*/
+  #filter_tab a#favorite_plurks_tab_btn i.pif-like:before{
+    /*改成其他文字圖示*/
+    content : "★";
+    color: green;/*只適用文字型態圖示*/
+    /*改成圖片
+    (圖片大小不能靠CSS調，別用太大張的圖，記得去背)*/
+    content : url('圖片網址');
+    /*移除icon*/
+    content : none;}
+  /*後方的統計數字*/
+   #filter_tab a#favorite_plurks_tab_btn .unread_generic{
+    /*底色*/
+    background: none !important;
+    /*文字顏色*/
+    color: #fff !important;}
+/*當滑鼠移到上面時*/
+  #filter_tab a#favorite_plurks_tab_btn:hover{
+    /*按鈕底色*/
+    background: blue;
+    /*文字顏色*/
+    color: green;
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/}
+  /*icon*/
+  #filter_tab a#favorite_plurks_tab_btn:hover i.pif-like:before{
+    /*改成其他文字圖示*/
+    content : "★";
+    color: green;/*只適用文字型態圖示*/
+    /*改成圖片
+    (圖片大小不能靠CSS調，別用太大張的圖，記得去背)*/
+    content : url('圖片網址');
+    /*移除icon*/
+    content : none;}
+  /*後方的統計數字*/
+   #filter_tab a#favorite_plurks_tab_btn:hover .unread_generic{
+    /*底色*/
+    background: none !important;
+    /*文字顏色*/
+    color: #fff !important;}
+    
+/***目前停留分類***/
+/*平常狀態*/
+  #filter_tab a.filter_selected{
+    /*按鈕底色*/
+    background: blue;
+    /*文字顏色*/
+    color: green;}
+  /*設定文字顏色後icon會同色
+  如果想要不同色
+  請在--下面--加上下方icon顏色設定*/
+  /*icon*/
+  #filter_tab a.filter_selected i:before{
+    /*改成其他文字圖示*/
+    content : "★";
+    color: green;/*只適用文字型態圖示*/
+    /*改成圖片
+    (圖片大小不能靠CSS調，別用太大張的圖，記得去背)*/
+    content : url('圖片網址');
+    /*移除icon*/
+    content : none;}
+  /*後方的統計數字*/
+  #filter_tab a.filter_selected .unread_generic{
+    /*底色*/
+    background: none !important;
+    /*文字顏色*/
+    color: #fff !important;}
+/*當滑鼠移到上面時*/
+  #filter_tab a.filter_selected:hover{
+    /*按鈕底色*/
+    background: blue;
+    /*文字顏色*/
+    color: green;
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/}
+  /*後方的統計數字*/
+  #filter_tab a.filter_selected:hover .unread_generic{
+   /*底色*/
+   background: blue !important;
+   /*文字顏色*/
+   color: red !important;}
+
+/*==========新訊息、新回應標籤==========*/
+/***N則新訊息***/
+/*平常狀態*/
+  div#noti_np a{
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/
+    /*按鈕底色*/
+    background: blue;
+    /*文字顏色*/
+    color: green;}
+  /*設定文字顏色後icon會同色
+  如果想要不同色
+  請在--下面--加上下方icon顏色設定*/
+  /*icon*/
+  div#noti_np .pif-message-new:before{
+    /*改成其他文字圖示*/
+    content : "★";
+    color: green;/*只適用文字型態圖示*/
+    /*改成圖片
+    (圖片大小不能靠CSS調，別用太大張的圖，記得去背)*/
+    content : url('圖片網址');
+    /*移除icon*/
+    content : none;}
+/*當滑鼠移到上面時*/
+  div#noti_np a:hover{
+    /*按鈕底色*/
+    background: blue;
+    /*文字顏色*/
+    color: green;
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/}
+  
+/***N則新回應***/
+/*平常狀態*/
+  div#noti_re_view a{
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/
+    /*按鈕底色*/
+    background: blue;
+    /*文字顏色*/
+    color: green;}
+  /*設定文字顏色後icon會同色
+  如果想要不同色
+  請在--下面--加上下方icon顏色設定*/
+  /*icon*/
+  div#noti_re_view .pif-message-new:before{
+    /*改成其他文字圖示*/
+    content : "★";
+    color: green;/*只適用文字型態圖示*/
+    /*改成圖片
+    (圖片大小不能靠CSS調，別用太大張的圖，記得去背)*/
+    content : url('圖片網址');
+    /*移除icon*/
+    content : none;}
+/*當滑鼠移到上面時*/
+  div#noti_re_view a:hover{
+    /*按鈕底色*/
+    background: blue;
+    /*文字顏色*/
+    color: green;
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/}
+  
+/*==========設為已讀、取消標籤==========*/
+/***全部標記為已讀***/
+/*平常狀態*/
+  a#mark_all_link{
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/
+    /*按鈕底色*/
+    background: blue;
+    /*文字顏色*/
+    color: green;}
+  /*設定文字顏色後icon會同色
+  如果想要不同色
+  請在--下面--加上下方icon顏色設定*/
+  /*icon*/
+  .pif-check:before{
+    /*改成其他文字圖示*/
+    content : "★";
+    color: green;/*只適用文字型態圖示*/
+    /*改成圖片
+    (圖片大小不能靠CSS調，別用太大張的圖，記得去背)*/
+    content : url('圖片網址');
+    /*移除icon*/
+    content : none;}
+/*當滑鼠移到上面時*/
+  a#mark_all_link:hover{
+    /*按鈕底色*/
+    background: blue;
+    /*文字顏色*/
+    color: green;
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/}
+
+/***顯示所有訊息***/
+/*平常狀態*/
+  #noti_re_actions a.updater_link:nth-of-type(2){
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/
+    /*按鈕底色*/
+    background: blue;
+    /*文字顏色*/
+    color: green;}
+  /*設定文字顏色後icon會同色
+  如果想要不同色
+  請在--下面--加上下方icon顏色設定*/
+  /*icon*/
+  .pif-cancel:before{
+    /*改成其他文字圖示*/
+    content : "★";
+    color: green;/*只適用文字型態圖示*/
+    /*改成圖片
+    (圖片大小不能靠CSS調，別用太大張的圖，記得去背)*/
+    content : url('圖片網址');
+    /*移除icon*/
+    content : none;}
+/*當滑鼠移到上面時*/
+  #noti_re_actions a.updater_link:nth-of-type(2):hover{
+    /*按鈕底色*/
+    background: blue;
+    /*文字顏色*/
+    color: green;
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/}

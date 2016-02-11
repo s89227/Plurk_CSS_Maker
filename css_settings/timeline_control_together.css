@@ -1,0 +1,122 @@
+/*==========訊息分類標籤==========*/
+/***所有訊息、我發表的訊息、私人訊息、回應過的訊息、喜歡/轉噗的訊息***/
+/*平常狀態*/
+  #filter_tab a{
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/
+    /*標籤底色*/
+    background: white;
+    /*文字顏色*/
+    color: black;}
+/*當滑鼠移到上面時*/
+  #filter_tab a:hover{
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/
+    /*標籤底色*/
+    background: white;
+    /*文字顏色*/
+    color: black;}
+
+/***目前停留分類***/
+/*平常狀態*/
+  #filter_tab a.filter_selected{
+    /*按鈕底色*/
+    background: blue;
+    /*文字顏色*/
+    color: green;}
+  /*設定文字顏色後icon會同色
+  如果想要不同色
+  請在--下面--加上下方icon顏色設定*/
+  /*icon*/
+  #filter_tab a.filter_selected i:before{
+    /*改成其他文字圖示*/
+    content : "★";
+    color: green;/*只適用文字型態圖示*/
+    /*改成圖片
+    (圖片大小不能靠CSS調，別用太大張的圖，記得去背)*/
+    content : url('圖片網址');
+    /*移除icon*/
+    content : none;}}
+/*當滑鼠移到上面時*/
+  #filter_tab a.filter_selected:hover{
+    /*按鈕底色*/
+    background: blue;
+    /*文字顏色*/
+    color: green;
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/}
+
+/*==========新訊息、新回應、設為已讀、取消標籤==========*/
+/*平常狀態*/
+  div#updater a{
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/
+    /*標籤底色*/
+    background: white;
+    /*文字顏色*/
+    color: black;}
+/*當滑鼠移到上面時*/
+  div#updater a:hover{
+    /*標籤圓角*/
+    /*一起設和分開設只要用其中一組就好了哦*/
+    /*四角一起設定*/
+    border-radius: 15px;
+    /*四腳分開設定*/
+    border-top-left-radius: 0px;/*左上角*/
+    border-top-right-radius: 0px;/*右上角*/
+    border-bottom-left-radius: 0px;/*左下角*/
+    border-bottom-right-radius: 0px;/*右下角*/
+    /*標籤底色*/
+    background: white;
+    /*文字顏色*/
+    color: black;}
+
+/*==========分類後方統計數字==========*/
+/*平常狀態*/
+.unread_generic{
+  /*底色*/
+  background: blue !important;
+  /*文字顏色*/
+  color: white !important;}
+/*當滑鼠移到上面時*/
+.unread_generic:hover{
+  /*底色*/
+  background: blue !important;
+  /*文字顏色*/
+  color: yellow !important;}
+/*選中的標籤*/
+/*修改自 疾患 提供的語法
+http://www.plurk.com/hoshikata */
+.filter_selected .unread_generic{
+  /*底色*/
+  background: none !important;
+  /*文字顏色*/
+  color: #fff !important;}
