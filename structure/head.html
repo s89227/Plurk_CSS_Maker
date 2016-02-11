@@ -1,0 +1,36 @@
+<head>
+  <style>
+    .snowflake {
+        color: #FFF;
+        font-size: 4em;
+        opacity: 0.33;
+        position: absolute;
+        top: 370px; right: 15px;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        z-index: 700;
+    }
+    .snowflake:hover {
+        cursor: pointer;
+        opacity: 0.66;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.66);
+    }
+    #dynamic_logo.run {
+        -webkit-animation: santa-run 1s infinite;
+        animation: santa-run 1s infinite;
+        -webkit-transition: right 1s;
+        -moz-transition: right 1s;
+        -o-transition: right 1s;
+        transition: right 1s;
+    }
+    @-webkit-keyframes santa-run {
+         0% { -webkit-transform: rotate(-8deg) }
+        50% { -webkit-transform: rotate(-18deg) }
+       100% { -webkit-transform: rotate(-8deg) }
+    }
+    @keyframes santa-run {
+         0% { transform: rotate(-8deg) }
+        50% { transform: rotate(-18deg) }
+       100% { transform: rotate(-8deg) }
+    }
+  </style>
+</head>

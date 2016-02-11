@@ -1,0 +1,116 @@
+<!-- Navigation Bar -->
+<!--這是動不了的區塊QQ-->
+<div class="bar-color"></div>
+<div id="top_bar" class="clearfix">
+	<div id="bar-color" class="bar-color"></div>
+	<!-- CENTER ITEMS -->
+	<div id="page_menu">
+		<div id="page_title"></div>
+	</div>
+	<div id="top_menu">
+		<!-- LEFT ITEMS -->
+		<div class="bar-block">
+        	<ul>
+				<li id="plurk_logo" class="item showMobile">
+					<a class="pif-plurk"></a>
+				</li>
+				<li class="item  left hideMobile portal">
+					<i class="bar-icon pif-menu"></i>
+					<div class="menu" data-roof-type="center">
+						<ul>
+							<li>
+								<a class="pif-hotplurk">熱門推文</a>
+							</li>
+							<li>
+								<a class="pif-topplurk">話題排行榜</a>
+							</li>
+							<li>
+								<a class="pif-hotshare">熱門分享</a>
+							</li>
+							<li>
+								<a class="pif-anynomous">有話偷偷說</a>
+							</li>
+							<li>
+								<a class="pif-verified">官方認證名單</a>
+							</li>
+							<li class="sep"></li>
+							<li>
+								<a class="pif-plurkapp">行動噗浪 (App)</a>
+							</li>
+						</ul>
+					</div>
+					<span class="alert-count"></span>
+				</li>
+				<li id="navbar_search_kw" class="item left hideMobile portal nohover">
+					<a void>
+						<i class="bar-icon pif-search"></i>
+						<input type='text' placeholder='要找什麼嗎？' />
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- RIGHT ITEMS -->
+		<div class="bar-block right">
+			<ul>
+				<li class="item hideMobile">
+					<a class="openGB" data-gbtitle="通知" data-gbwidth="670" data-gbheight="600">
+						<i class="bar-icon alert-icon pif-notify"></i>
+						<span id="noti_count" class="alert-count"></span>
+					</a>
+				</li>
+				<li class="item ">
+					<div id="nav-account">
+						<img src="" style="display:none" />
+						<span></span>
+					</div>
+					<div class="menu" data-roof-type="center">
+						<ul>
+							<!-- Account Info -->
+							<li>
+								<a class="pif-messages">個人檔案</a>
+							</li>
+							<li>
+								<a class="openGB pif-friends" data-gbwidth="650" data-gbheight="600">我的朋友</a>
+							</li>
+							<!-- Settings -->
+							<li class="sep"></li>
+							<li>
+								<a class="openGB pif-setting" data-gbwidth="650" data-gbheight="700">帳號管理</a>
+							</li>
+							<li>
+								<a class="openGB pif-profile" data-gbwidth="650" data-gbheight="700">個人檔案設定</a>
+							</li>
+							<li>
+								<a class="openGB pif-theme" data-gbwidth="650" data-gbheight="700">  自訂佈景</a>
+							</li>
+							<li class="sep"></li>
+							<li>
+								<a class="openGB pif-plurkapp" data-gbwidth="660" data-gbheight="700">應用程式</a>
+							</li>
+							<!-- Language Selecotr -->
+							<li class="sep"></li>
+							<li id="language-selector" class="nohover">
+								<a class="pif-earth" style="display:inline-block">
+									<form action="/changeLanguage" method="post" name="lang_form">
+										<input type="hidden" value="" name="from_page" id="lang_from_page" />
+										<select name="language" onchange="document.getElementById('lang_from_page').value = window.location.href; document.lang_form.submit()">
+											<option value="en" >English</option>
+											<option value="zh_Hant" selected="selected">中文 (繁體)</option>
+											<option value="zh_Hans_CN" >中文 (简体)</option>
+											<option value="ja" >日本語</option>
+											<!--剩的語言省略-->
+										</select>
+									</form>
+								</a>
+							</li>
+							<!-- Logout -->
+							<li class="sep"></li>
+							<li><a class="pif-logout">登出</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	<!-- END TOP MENU -->
+	</div>
+</div>
