@@ -1,4 +1,19 @@
 /*plurk河道css語法*/
+/*
+圓角設定
+border-radius:
+border-top-left-radius: 6px;左上角
+border-top-right-radius: 6px;右上角
+border-bottom-left-radius: 0px;左下角
+border-bottom-right-radius: 0px;右下角
+*/
+
+/*
+
+color: 字體顏色
+background-color 背景顏色
+
+*/
 
 #timeline_holder{
   /*固定河道高度 500px,若太低會造成擁擠請自行考量好*/
@@ -105,13 +120,38 @@
 .plurk_cnt{
   /*圓角*/
   border-radius: 6px;
+  /*設定透明度,原本為1,0.5為半透明*/
+  opacity:0.5;
+  /*IE8 與更早的版本*/
+  filter: alpha(opacity=50);
 }
 
+/*當經過每個噗的時候產生的hover效果*/
+.plurk_cnt:hover{
+  /*圓角*/
+  border-radius: 6px;
+  /*設為完全不透明*/
+  opacity: 1.0;
+  /*IE8 與更早的版本*/
+  filter: alpha(opacity=100);
+}
+
+/*噗浪打開的訊息框*/
+#form_holder{
+
+}
+
+/*打開的訊息框底下的圓角設定*/
+.info_box{
+  border-top-left-radius: 0px;/*左上角*/
+  border-top-right-radius: 0px;/*右上角*/
+  border-bottom-left-radius: 6px;/*左下角*/
+  border-bottom-right-radius: 6px;/*右下角*/
+}
 
 
 /*
 河道箭頭 right 向右
-
 */
 .cmp_arrow_right{
   /*箭頭顏色*/
@@ -133,7 +173,21 @@
 
 /*河道箭頭回到今天*/
 .cmp_back_to_today{
-
+  /*箭頭大小*/
+  font-size: 12px;
+  /*設定字體範圍高度*/
+  line-height: 18px;
+  /*箭頭背景顏色*/
+  background: #164ae0;
+  /*字體顏色*/
+  color: #f5eb05;
 }
+
+/*河道箭頭回到今天,前面的箭頭*/
+.cmp_back_to_today.pif-arrow-left::before{
+  /*箭頭顏色*/
+  color: #164ae0;
+}
+
 
 /**/
