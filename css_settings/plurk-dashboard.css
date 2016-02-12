@@ -1,0 +1,162 @@
+/*
+background 中
+左右對齊預設為左邊對齊，方式有 left center right 三種方式，
+上下對齊預設為上邊對齊，top center bottom 三種方式，
+也可以使用 px 調整對齊位置，但會以預設的左上進行調整。
+固定效果有兩種，scroll 是會隨著滾軸滾動，fixed 則是不隨著滾軸滾動。 
+重複效果則是 repeat repeat-x repeat-y no-repeat。
+*/
+/*
+font 中，
+樣式有 italic 斜體、normal 普通，
+粗體有 bold 粗體、bolder 更粗體、lighter 細體、normal 正常。
+*/
+/*
+text-decoration 中
+有四種效果 none 無效果、overline 上線、underline 底線、line-through 刪除線。
+*/
+/*
+border 中
+邊框形是有四種 solid 實線、double 雙線、dashed 虛線、dotted 點線。
+*/
+
+/*==========主控台各種設定==========*/
+/**主控台大環境設置，請選擇需要的部分進行修改**/
+/**徽章區雖然可被右側控制，但背景需要另外加才會有**/
+#plurk-dashboard, /*主控台*/
+.segment-content, /*主控台區塊*/
+.dash-group-form .segment-content, /*主控台上側區塊*/
+.dash-group-left .segment-content, /*主控台左側區塊*/
+.dash-group-right .segment-content, /*主控台右側區塊*/
+.dash-segment-post .segment-content, /*發噗區*/
+.dash-segment-profile .segment-content, /*自介區*/
+.dash-segment-stats .segment-content, /*統計區*/
+.dash-segment-friends .segment-content, /*朋友區*/
+.dash-segment-fans .segment-content, /*粉絲區*/
+#plurk-dashboard .dash-segment-award .segment-content /*徽章區*/
+{
+    width: 0px !important; /*寬度*/
+    height: 0px !important; /*高度*/
+    background: url() #fff left top fixed no-repeat; /*背景-圖片(網址) 顏色 左右對齊 上下對齊 固定 重複*/
+    color: #000; /*字體顏色*/
+    font: italic bold 12px/20px Arial; /*字體-樣式(斜體) 粗體 大小/行高 字型*//*font簡寫必有大小和字型*/
+    text-decoration: none; /*文字效果(底線)*/
+    border: solid 1px #000; /*邊框-樣式(實線) 粗度 顏色*/
+    border-radius: 1px 1px 1px 1px; /*圓角-左上 右上 右下 左下*/
+    margin: 1px 1px 1px 1px; /*外邊界-上 右 下 左*/
+    padding: 1px 1px 1px 1px; /*內邊界-上 右 下 左*/
+}
+
+/**個別設定，請選擇需要的部分進行修改**/
+#dash-profile, /*頭像暱稱欄*/
+#dash-additional-info, /*自我介紹欄*/
+#dash-stats, /*統計區內容*/
+#dash-friends, /*朋友區內容*/
+#dash-fans, /*粉絲區內容*/
+#dash-award /*徽章區內容*/
+{
+    color: #000; /*字體顏色*/
+    font: italic bold 12px/20px Arial; /*字體-樣式(斜體) 粗體 大小/行高 字型*//*font簡寫必有大小和字型*/
+    margin: 1px 1px 1px 1px; /*外邊界-上 右 下 左*/
+    padding: 1px 1px 1px 1px; /*內邊界-上 右 下 左*/
+}
+
+/**細節設定-主控台左方**/
+/*頭像圖片*/
+.profile-pic 
+{
+	width: 0px !important; /*寬度*/
+	height: 0px !important; /*高度*/
+	border-radius: 0px 0px 0px 0px !important; /*圓角-左上 右上 右下 左下*/
+}
+/*文字*/
+#full_name, /*暱稱帳號*/
+.display_name, /*暱稱*/
+.nick_name, /*帳號*/
+.profile-info, /*個人資訊*/
+#about_me /*自我介紹*/
+{
+    color: #000 !important;
+    font: italic bold 12px/20px Arial !important; /*字體-樣式(斜體) 粗體 大小/行高 字型*//*font簡寫必有大小和字型*/
+    text-decoration: none !important; /*文字效果(底線)*/
+}
+
+/**細節設定-主控台右方**/
+/*文字*/
+.dash-group-right h2, /*統計、朋友、粉絲標題*/
+#dash-stats h2, /*統計標題*/
+#dash-friends h2, /*朋友標題*/
+#dash-fans h2, /*粉絲標題*/
+.karma_hover, /*卡馬*/
+#karma, /*卡馬本體*/
+#dash-stats table th, /*統計數值的文字*/
+#dash-stats table td /*統計數值的數字*/
+{
+    color: #000 !important;
+    font: italic bold 12px/20px Arial !important; /*字體-樣式(斜體) 粗體 大小/行高 字型*//*font簡寫必有大小和字型*/
+    text-decoration: none !important; /*文字效果(底線)*/
+}
+/*連結*/
+.openGB, /*所有連結*/
+.show_all_friends a, /*所有朋友*/
+.show_mutual_friends a, /*共同好友*/
+.show_all_friends a, /*所有粉絲*/
+.link_arrow, /*如何……？*/
+.openGB:hover /*所有連結-滑鼠移上*/
+.show_all_friends a:hover, /*所有朋友-滑鼠移上*/
+.show_mutual_friends a:hover, /*共同好友-滑鼠移上*/
+.show_all_friends a:hover, /*所有粉絲-滑鼠移上*/
+.link_arrow:hover /*如何……？-滑鼠移上*/
+{
+    color: #000 !important;
+    font: italic bold 12px/20px Arial !important; /*字體-樣式(斜體) 粗體 大小/行高 字型*//*font簡寫必有大小和字型*/
+    text-decoration: none !important; /*文字效果(底線)*/
+}
+/*頭像*/
+#friend_holder.friend_holder img,  /*好友頭像*/
+#fan_holder.friend_holder img  /*粉絲頭像*/
+{
+    margin: 1px 1px 1px 1px  !important; /*頭像之間距離*//*外邊界-上 右 下 左*/
+    border-radius: 1px 1px 1px 1px !important; /*圓角-左上 右上 右下 左下*/
+}
+/*徽章*/
+.award_bar div
+{
+    margin:1px 1px 1px 0px !important; /*徽章之間距離*//*外邊界-上 右 下 左*/
+}
+
+/**其他**/
+/*按鈕設定*/
+.friend_man.add_follow, /*好友按鈕*/
+.friend_man.add_friend, /*粉絲按鈕*/
+.friend_man.remove, /*移除好友、粉絲按鈕*/
+.friend_man.private_plurk, /*私噗按鈕*/
+.friend_man.add_follow:hover, /*好友按鈕-滑鼠移上*/
+.friend_man.add_friend:hover, /*粉絲按鈕-滑鼠移上*/
+.friend_man.remove:hover, /*移除好友、粉絲按鈕-滑鼠移上*/
+.friend_man.private_plurk:hover /*私噗按鈕-滑鼠移上*/
+{
+    background: #fff !important; /*背景顏色*/
+    color: #000 !important; /*字體顏色*/
+    font-size: 12px !important; /*字體大小*/
+    text-decoration: none !important; /*文字效果(底線)*/
+    border: solid 1px #000; /*邊框-樣式(實線) 粗度 顏色*/
+    border-radius: 1px 1px 1px 1px; /*圓角-左上 右上 右下 左下*/
+    padding: 1px 1px 1px 1px; /*按鈕大小*//*內邊界-上 右 下 左*/
+}
+/*按鈕隱藏*/
+#private_plurk, /*私人訊息按鈕*/
+#friend_managment, /*好友按鈕*/
+#fan_managment /*粉絲按鈕*/
+{
+    height: 0px !important;
+    overflow: hidden !important;
+}
+
+/*==========特效區==========*/
+
+
+
+
+
+
