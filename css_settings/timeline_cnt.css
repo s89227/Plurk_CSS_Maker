@@ -6,6 +6,8 @@ border-top-left-radius: 6px;左上角
 border-top-right-radius: 6px;右上角
 border-bottom-left-radius: 0px;左下角
 border-bottom-right-radius: 0px;右下角
+產生器
+http://border-radius.com/
 */
 
 /*
@@ -126,11 +128,38 @@ background-color 背景顏色
   <img id="creature" src="//s.plurk.com/62b6a94a6b431abf459ac34f9f0fb617.png" height="180">
 }
 
+#timeline_holder div.link_extend .p_img img {
+
+  /*邊框 px,粗框,框顏色 */
+  border: 1px solid #e49f4e;
+  /*圓角*/
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+}
+
+/*設定河道上的噗浪照片會有效果*/
+#timeline_holder div.link_extend .p_img img:hover{
+  /*滑過圖片時,有向上效果*/
+  margin-top: -3px;
+  /*css transition 功能*/
+  -webkit-transition: margin 0.3s ease-out;
+}
+
+
+
+/*河道上,噗的回應數*/
+.response_count{
+  /*圓角*/
+  -webkit-border-radius: 6px;
+}
+
 
 /*plurk_cnt每個plurk未展開的訊息*/
 #timeline_holder .plurk_cnt {
   /*圓角*/
-  border-radius: 6px;
+  -webkit-border-radius: 6px;
   /*設定透明度,原本為1,0.5為半透明*/
   opacity: 0.5;
   /*IE8 與更早的版本*/
@@ -141,7 +170,7 @@ background-color 背景顏色
 /*每個噗的時候產生的hover效果*/
 #timeline_holder .link_extend .plurk_cnt:hover{
   /*圓角*/
-  border-radius: 6px;
+  -webkit-border-radius: 6px;
   /*透明度*/
   opacity: 0.8;
   /*IE8 與更早的版本*/
@@ -209,6 +238,19 @@ background-color 背景顏色
 .cmp_back_to_today.pif-arrow-left::before{
   /*箭頭顏色*/
   color: #164ae0;
+}
+
+/*河道左下角,所有訊息做hover的效果*/
+#filter_tab a.filter_selected:hover{
+  /*高度*/
+  height: 25px;
+  /*與上一個物體間距*/
+  margin-top: 6px;
+  margin-left: 1px;
+  /*位置*/
+  position: relative;
+  /*背景顏色*/
+  background-color: green;
 }
 
 
