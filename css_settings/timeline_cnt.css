@@ -9,6 +9,19 @@ border-bottom-right-radius: 0px;右下角
 */
 
 /*
+設定每個噗有透明度有兩種方法
+1.設定#timeline_holder的opacity為1.0以下
+(當你點開每個plurk時,使用hover效果會反白回去)
+
+2.設定#plurk_cnt,當你使用此設定時,也是讓每個噗有透明度,
+但點開噗時還是一樣的透明度
+
+
+*/
+
+
+
+/*
 
 color: 字體顏色
 background-color 背景顏色
@@ -114,23 +127,31 @@ background-color 背景顏色
 }
 
 
-
-/*每個河道上的噗*/
-
-.plurk_cnt{
+/*plurk_cnt每個plurk未展開的訊息*/
+#timeline_holder .plurk_cnt {
   /*圓角*/
   border-radius: 6px;
   /*設定透明度,原本為1,0.5為半透明*/
-  opacity:0.5;
+  opacity: 0.5;
   /*IE8 與更早的版本*/
   filter: alpha(opacity=50);
 }
 
-/*當經過每個噗的時候產生的hover效果*/
-.plurk_cnt:hover{
+/*.link_extend 鼠標滑至噗浪訊息時所套用的class,*/
+/*每個噗的時候產生的hover效果*/
+#timeline_holder .link_extend .plurk_cnt:hover{
   /*圓角*/
   border-radius: 6px;
-  /*設為完全不透明*/
+  /*透明度*/
+  opacity: 0.8;
+  /*IE8 與更早的版本*/
+  filter: alpha(opacity=80);
+}
+
+/*.plurk_box點開噗浪下方面板,包括回覆訊息*/
+
+#timeline_holder .plurk_box .plurk_cnt{
+  /*透明度*/
   opacity: 1.0;
   /*IE8 與更早的版本*/
   filter: alpha(opacity=100);
@@ -140,6 +161,7 @@ background-color 背景顏色
 #form_holder{
 
 }
+
 
 /*打開的訊息框底下的圓角設定*/
 .info_box{
