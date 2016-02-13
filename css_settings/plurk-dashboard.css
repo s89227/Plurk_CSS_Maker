@@ -1,4 +1,4 @@
-/*
+﻿/*
 background 中
 左右對齊預設為左邊對齊，方式有 left center right 三種方式，
 上下對齊預設為上邊對齊，top center bottom 三種方式，
@@ -19,6 +19,8 @@ text-decoration 中
 border 中
 邊框形是有四種 solid 實線、double 雙線、dashed 虛線、dotted 點線。
 */
+
+
 
 /*==========主控台各種設定==========*/
 /**主控台大環境設置，請選擇需要的部分進行修改**/
@@ -47,6 +49,7 @@ border 中
     padding: 1px 1px 1px 1px; /*內邊界-上 右 下 左*/
 }
 
+
 /**個別設定，請選擇需要的部分進行修改**/
 #dash-profile, /*頭像暱稱欄*/
 #dash-additional-info, /*自我介紹欄*/
@@ -61,6 +64,67 @@ border 中
     padding: 1px 1px 1px 1px; /*內邊界-上 右 下 左*/
 }
 
+
+/**細節設定-主控台上方**/
+/*發噗框設定*/
+.input_holder, /*發噗框外框*/
+.content, /*發噗框內容*/
+{
+    width: 0px !important; /*寬度*/
+    height: 0px !important; /*高度*/
+    background: #fff !important; /*背景顏色*/
+    color: #000 !important; /*字體顏色*/
+    font: italic bold 12px/20px Arial; /*字體-樣式(斜體) 粗體 大小/行高 字型*//*font簡寫必有大小和字型*/
+    text-decoration: none; /*文字效果(底線)*/
+    border: solid 1px #000; /*邊框-樣式(實線) 粗度 顏色*/
+    border-radius: 1px 1px 1px 1px; /*圓角-左上 右上 右下 左下*/
+}
+
+/*按鈕*/
+.dd_img, /*心情now按鈕*/
+.click.submit_img /*發噗按鈕*/
+{
+    width: 0px !important; /*寬度*/
+    height: 0px !important; /*高度*/
+    background: #fff !important; /*背景顏色*/
+    color: #000 !important; /*字體顏色*/
+    font: italic bold 12px/20px Arial; /*字體-樣式(斜體) 粗體 大小/行高 字型*//*font簡寫必有大小和字型*/
+    text-decoration: none; /*文字效果(底線)*/
+    border: solid 1px #000; /*邊框-樣式(實線) 粗度 顏色*/
+    border-radius: 1px 1px 1px 1px; /*圓角-左上 右上 右下 左下*/
+    margin: 1px 1px 1px 1px; /*外邊界-上 右 下 左*/
+    padding: 1px 1px 1px 1px; /*內邊界-上 右 下 左*/
+}
+
+/*發噗icon設定*/
+.icons_holder, /*icon外框*/
+.icons_holder li, /*icon整體*/
+.icons_holder li:hover, /*icon整體-滑鼠移上*/
+.cmp_emoticon_off, /*表情icon*/
+.cmp_media_off, /*分享icon*/
+.cmp_sync_off, /*同步icon*/
+.cmp_privacy_off, /*私人icon*/
+.cmp_emoticon_on, /*表情icon-滑鼠移上*/
+.cmp_media_on, /*分享icon-滑鼠移上*/
+.cmp_sync_on, /*同步icon-滑鼠移上*/
+.cmp_privacy_on /*私人icon-滑鼠移上*/
+{
+    color: #000 !important; /*字體顏色*/
+    font-size: 12px !important; /*字體大小*/
+    margin: 1px 1px 1px 1px; /*外邊界-上 右 下 左*/
+}
+
+/*去除表符icon背景*/
+/*表符icon放大縮小時，後面會有個圓形背景，不好調大小，所以去除會比較好*/
+.cmp_emoticon_off::before,
+.cmp_emoticon_off::after,
+.cmp_emoticon_on::before,
+.cmp_emoticon_on::after
+{
+    background: none !important;
+}
+
+
 /**細節設定-主控台左方**/
 /*頭像圖片*/
 .profile-pic 
@@ -69,6 +133,7 @@ border 中
 	height: 0px !important; /*高度*/
 	border-radius: 0px 0px 0px 0px !important; /*圓角-左上 右上 右下 左下*/
 }
+
 /*文字*/
 #full_name, /*暱稱帳號*/
 .display_name, /*暱稱*/
@@ -76,10 +141,11 @@ border 中
 .profile-info, /*個人資訊*/
 #about_me /*自我介紹*/
 {
-    color: #000 !important;
+    color: #000 !important; /*字體顏色*/
     font: italic bold 12px/20px Arial !important; /*字體-樣式(斜體) 粗體 大小/行高 字型*//*font簡寫必有大小和字型*/
     text-decoration: none !important; /*文字效果(底線)*/
 }
+
 
 /**細節設定-主控台右方**/
 /*文字*/
@@ -92,10 +158,11 @@ border 中
 #dash-stats table th, /*統計數值的文字*/
 #dash-stats table td /*統計數值的數字*/
 {
-    color: #000 !important;
+    color: #000 !important; /*字體顏色*/
     font: italic bold 12px/20px Arial !important; /*字體-樣式(斜體) 粗體 大小/行高 字型*//*font簡寫必有大小和字型*/
     text-decoration: none !important; /*文字效果(底線)*/
 }
+
 /*連結*/
 .openGB, /*所有連結*/
 .show_all_friends a, /*所有朋友*/
@@ -108,24 +175,35 @@ border 中
 .show_all_friends a:hover, /*所有粉絲-滑鼠移上*/
 .link_arrow:hover /*如何……？-滑鼠移上*/
 {
-    color: #000 !important;
+    color: #000 !important; /*字體顏色*/
     font: italic bold 12px/20px Arial !important; /*字體-樣式(斜體) 粗體 大小/行高 字型*//*font簡寫必有大小和字型*/
     text-decoration: none !important; /*文字效果(底線)*/
 }
+
 /*頭像*/
 #friend_holder.friend_holder img,  /*好友頭像*/
 #fan_holder.friend_holder img  /*粉絲頭像*/
 {
+    width: 0px !important; /*頭像寬度*/
+    height: 0px !important; /*頭像高度*/
     margin: 1px 1px 1px 1px  !important; /*頭像之間距離*//*外邊界-上 右 下 左*/
     border-radius: 1px 1px 1px 1px !important; /*圓角-左上 右上 右下 左下*/
 }
+
 /*徽章*/
 .award_bar div
 {
     margin:1px 1px 1px 0px !important; /*徽章之間距離*//*外邊界-上 右 下 左*/
 }
 
-/**其他**/
+/*箭頭*/
+#karma_arrow, /*卡馬箭頭*/
+.link_arrow i /*疑問箭頭*/
+{
+    color: #000 !important; /*字體顏色*/
+    font-size: 0px !important; /*字體大小*/
+}
+
 /*按鈕設定*/
 .friend_man.add_follow, /*好友按鈕*/
 .friend_man.add_friend, /*粉絲按鈕*/
@@ -144,19 +222,156 @@ border 中
     border-radius: 1px 1px 1px 1px; /*圓角-左上 右上 右下 左下*/
     padding: 1px 1px 1px 1px; /*按鈕大小*//*內邊界-上 右 下 左*/
 }
+
+
+
+/*==========區塊隱藏==========*/
+/*區塊隱藏*/
+#plurk-dashboard, /*主控台*/
+.dash-group-form, /*主控台上側區塊*/
+.dash-group-left, /*主控台左側區塊*/
+.dash-group-right, /*主控台右側區塊*/
+.dash-segment-post, /*發噗區*/
+.dash-segment-profile, /*自介區*/
+.dash-segment-stats, /*統計區*/
+.dash-segment-friends, /*朋友區*/
+.dash-segment-fans, /*粉絲區*/
+#plurk-dashboard .dash-segment-award /*徽章區*/
+{
+    height: 0px !important; /*留下來的高度*/
+    overflow: hidden !important; /*超出部分(隱藏)*/
+}
+
+/*細節隱藏*/
+img.profile-pic, /*頭像圖片*/
+#about_me, /*自我介紹*/
+.dash-stats-karma, /*卡馬區*/
+#dash-friends-pics .show_all_friends, /*所有朋友文字*/
+#dash-friends-pics .show_mutual_friends, /*共同好友文字*/
+#dash-fans-pics .show_all_friends, /*所有粉絲文字*/
+#friend_holder, /*好友頭像欄*/
+#fan_holder /*粉絲頭像欄*/
+{
+    height: 0px !important; /*留下來的高度*/
+    overflow: hidden !important; /*超出部分(隱藏)*/
+}
+
+/*文字隱藏*/
+.display_name, /*暱稱*/
+.nick_name, /*帳號*/
+.profile-info, /*個人資訊*/
+#dash-stats table th, /*統計數值的文字*/
+#dash-stats table td, /*統計數值的數字*/
+.link_arrow /*如何……？建議*/
+{
+    color: rgba(0,0,0,0) !important; /*文字透明*/
+}
+
 /*按鈕隱藏*/
 #private_plurk, /*私人訊息按鈕*/
 #friend_managment, /*好友按鈕*/
 #fan_managment /*粉絲按鈕*/
 {
-    height: 0px !important;
-    overflow: hidden !important;
+    height: 0px !important; /*留下來的高度*/
+    overflow: hidden !important; /*超出部分(隱藏)*/
 }
 
+
+
 /*==========特效區==========*/
+/*
+transition 漸變特效中
+效果有五種 linear 均速、ease 很快→漸慢、ease-in 漸漸變快、ease-out 漸漸變慢、ease-in-out 漸快→慢下來→漸快。
+*/
+
+
+/**漸變縮放特效**/
+/*因為程式碼的原故，所以必須把寬度與開度的漸變分開寫，有可能會有瑕疵*/
+/*寬度漸變縮放*/
+.dash-segment-profile, /*頭像、自介區*/
+.dash-segment-stats, /*統計區*/
+.dash-segment-friends, /*朋友區*/
+.dash-segment-fans, /*粉絲區*/
+.dash-segment-award, /*徽章區*/
+.dash-segment-profile:hover, /*頭像、自介區-滑鼠移上*/
+.dash-segment-stats:hover, /*統計區-滑鼠移上*/
+.dash-segment-friends:hover, /*朋友區-滑鼠移上*/
+.dash-segment-fans:hover, /*粉絲區-滑鼠移上*/
+.dash-segment-award:hover /*徽章區-滑鼠移上*/
+{
+    width: 0px !important; /*寬度*/
+    overflow: hidden !important; /*超出部分(隱藏)*/
+    transition: width 1.6s ease; /*漸變特效-指定寬度 花費時間 效果*/
+}
+
+/*高度漸變縮放*/
+#dash-profile, /*頭像暱稱內容*/
+#dash-additional-info, /*自我介紹內容*/
+#dash-stats, /*統計區內容*/
+#dash-friends, /*朋友區內容*/
+#dash-fans, /*粉絲區內容*/
+#dash-award, /*徽章區內容*/
+#dash-profile:hover, /*頭像暱稱內容-滑鼠移上*/
+#dash-additional-info:hover, /*自我介紹內容-滑鼠移上*/
+#dash-stats:hover, /*統計區內容-滑鼠移上*/
+#dash-friends:hover, /*朋友區內容-滑鼠移上*/
+#dash-fans:hover, /*粉絲區內容-滑鼠移上*/
+#dash-award:hover /*徽章區內容-滑鼠移上*/
+{
+    height: 0px !important;
+    overflow: hidden !important; /*超出部分(隱藏)*/
+    transition: height 1.6s ease; /*漸變特效-指定寬度 花費時間 效果*/
+}
+
+
+/**透明度變化**/
+#plurk-dashboard, /*主控台*/
+.dash-group-form, /*主控台上側*/
+.dash-group-left, /*主控台左側*/
+.dash-group-right, /*主控台右側*/
+.dash-segment-profile, /*頭像、自介區*/
+.dash-segment-stats, /*統計區*/
+.dash-segment-friends, /*朋友區*/
+.dash-segment-fans, /*粉絲區*/
+.dash-segment-award, /*徽章區*/
+#plurk-dashboard:hover, /*主控台-滑鼠移上*/
+.dash-group-form:hover, /*主控台上側-滑鼠移上*/
+.dash-group-left:hover, /*主控台左側-滑鼠移上*/
+.dash-group-right:hover, /*主控台右側-滑鼠移上*/
+.dash-segment-profile:hover, /*頭像、自介區-滑鼠移上*/
+.dash-segment-stats:hover, /*統計區-滑鼠移上*/
+.dash-segment-friends:hover, /*朋友區-滑鼠移上*/
+.dash-segment-fans:hover, /*粉絲區-滑鼠移上*/
+.dash-segment-award:hover /*徽章區-滑鼠移上*/
+{
+    filter: alpha(opacity=50) !important; /*數值 0~100*//*上下數值要一樣*/
+    opacity: 0.5 !important; /*數值 0~1 (等於上面數值除以100)*/
+}
 
 
 
-
-
-
+/*==========當視窗較小時，主控台的變化==========*/
+/**此部分亦可另外套入特效**/
+#plurk-dashboard.narrow .dash-group-left, /*主控台上側*/
+#plurk-dashboard.narrow .dash-group-form, /*主控台左側*/
+#plurk-dashboard.narrow .dash-group-right, /*主控台右側*/
+#plurk-dashboard.narrow .dash-segment-post, /*發噗區*/
+#plurk-dashboard.narrow .dash-segment-profile, /*自介區*/
+#plurk-dashboard.narrow .dash-segment-stats, /*統計區*/
+#plurk-dashboard.narrow .dash-segment-friendst, /*朋友區*/
+#plurk-dashboard.narrow .dash-segment-fans, /*粉絲區*/
+#plurk-dashboard.narrow .dash-segment-award, /*徽章區*/
+#plurk-dashboard.narrow .dash-group-left:hover, /*主控台上側-滑鼠移上*/
+#plurk-dashboard.narrow .dash-group-form:hover, /*主控台左側-滑鼠移上*/
+#plurk-dashboard.narrow .dash-group-right:hover, /*主控台右側-滑鼠移上*/
+#plurk-dashboard.narrow .dash-segment-post:hover, /*發噗區-滑鼠移上*/
+#plurk-dashboard.narrow .dash-segment-profile:hover, /*自介區-滑鼠移上*/
+#plurk-dashboard.narrow .dash-segment-stats:hover, /*統計區-滑鼠移上*/
+#plurk-dashboard.narrow .dash-segment-friendst:hover, /*朋友區-滑鼠移上*/
+#plurk-dashboard.narrow .dash-segment-fans:hover, /*粉絲區-滑鼠移上*/
+#plurk-dashboard.narrow .dash-segment-award:hover /*徽章區-滑鼠移上*/
+{
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+}
