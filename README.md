@@ -10,10 +10,9 @@ Create full CSS style sheet for Plurk.
 - [x] timeline_bg.html
 - [x] timeline_control.html
 - [x] dashboard_holder.html
-- [ ] form_holder.html
+- [x] form_holder.html
 - [x] colorbox.html
-- [ ] popView(1).html
-- [ ] popView(2).html
+- [x] popView.html
 - [ ] GB_window.html
 - [ ] colorboxVideo.html
 
@@ -24,8 +23,6 @@ Create full CSS style sheet for Plurk.
 - [x] dashboard_holder.css
 - [ ] form_holder.css
 - [ ] colorbox.css
-- [ ] popView(1).css
-- [ ] popView(2).css
 - [ ] GB_window.css
 - [ ] colorboxVideo.css
 - [ ] else.css
