@@ -28,6 +28,9 @@ Create full CSS style sheet for Plurk.
 - [ ] else.css
 
 ####使用者介面設計
+- [參考網站](http://getbootstrap.com/customize/)
+- 留白多一點
+- 預覽效果
+- 全頁式設計 or 展開收起
 
 ####JavaScript功能
-
