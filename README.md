@@ -13,8 +13,8 @@ Create full CSS style sheet for Plurk.
 - [x] form_holder.html
 - [x] colorbox.html
 - [x] popView.html
-- [ ] GB_window.html
-- [ ] colorboxVideo.html
+- [x] GB_window.html
+- [x] colorboxVideo.html
 
 ####CSS可用語法整理(css_settings資料夾)
 - [x] timeline_cnt.css
