@@ -84,7 +84,7 @@ section{
 	position: absolute;
 	overflow: auto;
 	z-index: 5;
-	width: 44vw;
+	width: 54vw;
 	height: 73vh;
 	right: 5vw;
 	top: 22vh;
@@ -110,7 +110,7 @@ section.tab:target{
 	background: gray;
 	height: 73vh;
 	overflow: auto;
-	width: 44vw;
+	width: 34vw;
 }
 
 /*頁尾*/
