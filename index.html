@@ -16,20 +16,44 @@
     <link rel="stylesheet" type="text/css" href="css/general.css">
 </head>
 <body>
-	<nav id="nav"><ul>
-        <a href="#home"><li>首頁&amp;使用簡介</li></a>
-        <a href="#all"><li>整體設定</li></a>
-        <a href="#timeline"><li>河道</li></a>
-        <a href="#dashboard"><li>個人面板</li></a>
-        <a href="#message"><li>噗</li></a>
-        <a href="#conect"><li>聯絡我們</li></a>
-    </ul></nav>
     <main>
-		<section id="home">首頁&amp;使用簡介</section>
-		<section id="all">整體設定</section>
-		<section id="timeline">河道</section>
-		<section id="dashboard">個人面板</section>
-		<section id="message">噗</section>
+		<nav id="nav"><ul>
+        	<a href="#home"><li>首頁</li></a>
+        	<a href="#doc"><li>文件</li></a>
+        	<a href="#maker"><li>生產器</li></a>
+        	<a href="#conect"><li>聯絡我們</li></a>
+    	</ul></nav>
+
+		<section id="home">首頁</section>
+		<section id="doc">文件</section>
+    	<section id="maker">
+    		<ul id="tab_nav">
+    			<a href="#intro"><li>簡介</li></a>
+    			<a href="#all"><li>整體</li></a>
+        		<a href="#timeline"><li>河道</li></a>
+        		<a href="#dashboard"><li>個人面板</li></a>
+        		<a href="#message"><li>噗</li></a>
+    			<a href="#result"><li>產出的CSS</li></a>
+    		</ul>
+    		<section id="intro" class="tab"><div class="content">
+    			簡介
+    		</div></section>
+			<section id="all" class="tab"><div class="content">
+				整體
+			</div></section>
+			<section id="timeline" class="tab"><div class="content">
+				河道
+			</div></section>
+			<section id="dashboard" class="tab"><div class="content">
+				個人面板
+			</div></section>
+			<section id="message" class="tab"><div class="content">
+				噗
+			</div></section>
+    		<section id="result" class="tab"><div class="content">
+    			產出的CSS
+    		</div></section>
+		</section>
 		<section id="conect">聯絡我們</section>
 	</main>
 	<footer>

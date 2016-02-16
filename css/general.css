@@ -23,6 +23,7 @@ a:active{
 	font-weight: bold;
 }
 
+/*最上方導覽列*/
 nav{
 	background: rgba(255,255,255,0.2);
 	text-align: center;
@@ -36,6 +37,7 @@ nav{
     box-shadow: 5px 5px 10px black;
     z-index: 10;
 }
+
 nav li{
     display: inline-block;
 }
@@ -46,6 +48,25 @@ nav a:not(:last-child)::after{
     margin-left: 1em;
     margin-right: 1em;
 }
+
+/*生產器分頁導覽列*/
+ul#tab_nav{
+	z-index: 5;
+	text-align: center;
+    line-height: 5vh;
+    position: absolute;
+}
+ul#tab_nav li{
+	display: inline-block;
+	width: calc(70vw/6);
+	border-radius: 15px;
+	background: blue;
+}
+ul#tab_nav li:hover{
+	background: skyblue;
+}
+
+/*大分頁*/
 section{
 	width: 90vw;
 	height: 80vh;
@@ -56,6 +77,28 @@ section{
     text-align: center;
 }
 
+/*生產器分頁*/
+section#maker{
+	position: relative;
+}
+section.tab{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: auto;
+	min-height: 73vh;
+	background: green;
+	padding-top: 22vh;
+}
+section.tab:target{
+	z-index: 3;
+}
+.tab .content{
+	background: gray;
+	min-height: 73vh;
+}
+
+/*頁尾*/
 footer{
 	margin-top: 5vw;
 	padding: 3vw;
