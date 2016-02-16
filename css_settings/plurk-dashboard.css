@@ -39,7 +39,7 @@ border 中
 {
     width: 0px !important; /*寬度*/
     height: 0px !important; /*高度*/
-    background: url() #fff left top fixed no-repeat; /*背景-圖片(網址) 顏色 左右對齊 上下對齊 固定 重複*/
+    background: #fff url() left top fixed no-repeat; /*背景-圖片(網址) 顏色 左右對齊 上下對齊 固定 重複*/
     color: #000; /*字體顏色*/
     font: italic bold 12px/20px Arial; /*字體-樣式(斜體) 粗體 大小/行高 字型*//*font簡寫必有大小和字型*/
     text-decoration: none; /*文字效果(底線)*/
@@ -67,8 +67,8 @@ border 中
 
 /**細節設定-主控台上方**/
 /*發噗框設定*/
-.input_holder, /*發噗框外框*/
-.content, /*發噗框內容*/
+#plurk-dashboard .input_holder, /*發噗框外框*/
+#plurk-dashboard .content, /*發噗框內容*/
 {
     width: 0px !important; /*寬度*/
     height: 0px !important; /*高度*/
@@ -81,7 +81,7 @@ border 中
 }
 
 /*按鈕*/
-.dd_img, /*心情now按鈕*/
+#plurk_form .dd_img, /*心情now按鈕*/
 .click.submit_img /*發噗按鈕*/
 {
     width: 0px !important; /*寬度*/
@@ -99,12 +99,12 @@ border 中
 /*發噗icon設定*/
 .icons_holder, /*icon外框*/
 .icons_holder li, /*icon整體*/
-.icons_holder li:hover, /*icon整體-滑鼠移上*/
-.cmp_emoticon_off, /*表情icon*/
+.cmp_emoticon_off:before, /*表情icon*/
 .cmp_media_off, /*分享icon*/
 .cmp_sync_off, /*同步icon*/
 .cmp_privacy_off, /*私人icon*/
-.cmp_emoticon_on, /*表情icon-滑鼠移上*/
+.icons_holder li:hover, /*icon整體-滑鼠移上*/
+.cmp_emoticon_on:before, /*表情icon-滑鼠移上*/
 .cmp_media_on, /*分享icon-滑鼠移上*/
 .cmp_sync_on, /*同步icon-滑鼠移上*/
 .cmp_privacy_on /*私人icon-滑鼠移上*/
@@ -114,14 +114,16 @@ border 中
     margin: 1px 1px 1px 1px; /*外邊界-上 右 下 左*/
 }
 
-/*去除表符icon背景*/
-/*表符icon放大縮小時，後面會有個圓形背景，不好調大小，所以去除會比較好*/
-.cmp_emoticon_off::before,
-.cmp_emoticon_off::after,
-.cmp_emoticon_on::before,
-.cmp_emoticon_on::after
+/*表符icon背景*/
+/*表符icon放大縮小時，後面會有個圓形背景，不好調大小，所以去除會比較好，或者調整*/
+.cmp_emoticon_off:after,
+.cmp_emoticon_on:after
 {
-    background: none !important;
+    width: 10px;
+    height: 10px;
+    background: none !important; /*背景顏色*/
+    border-radius: 20px; /*圓角-左上 右上 右下 左下*/
+    margin: 0px 0px 0px 0px; /*外邊界-上 右 下 左*/
 }
 
 
@@ -344,7 +346,6 @@ transition 漸變特效中
 .dash-segment-fans:hover, /*粉絲區-滑鼠移上*/
 .dash-segment-award:hover /*徽章區-滑鼠移上*/
 {
-    filter: alpha(opacity=50) !important; /*數值 0~100*//*上下數值要一樣*/
     opacity: 0.5 !important; /*數值 0~1 (等於上面數值除以100)*/
 }
 
