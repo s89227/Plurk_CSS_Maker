@@ -53,12 +53,13 @@ nav a:not(:last-child)::after{
 ul#tab_nav{
 	z-index: 5;
 	text-align: center;
+	font-size: 0.8em;
     line-height: 5vh;
     position: absolute;
 }
 ul#tab_nav li{
 	display: inline-block;
-	width: calc(70vw/6);
+	width: calc(88vw/6);
 	border-radius: 15px;
 	background: blue;
 }
@@ -75,6 +76,18 @@ section{
     padding-right: 5vw;
     padding-bottom: 5vh;
     text-align: center;
+}
+
+/*預覽區*/
+#preview{
+	background: gray;
+	position: absolute;
+	overflow: auto;
+	z-index: 5;
+	width: 44vw;
+	height: 73vh;
+	right: 5vw;
+	top: 22vh;
 }
 
 /*生產器分頁*/
@@ -95,7 +108,9 @@ section.tab:target{
 }
 .tab .content{
 	background: gray;
-	min-height: 73vh;
+	height: 73vh;
+	overflow: auto;
+	width: 44vw;
 }
 
 /*頁尾*/
