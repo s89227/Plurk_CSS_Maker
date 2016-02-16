@@ -32,4 +32,14 @@ Create full CSS style sheet for Plurk.
 - 預覽效果
 - 全頁式設計 or 展開收起
 
-####JavaScript功能
+####網頁架設
+######架構
+- [ ] 切版
+- [ ] 內文
+- [ ] 使用者設定區
+- [ ] 預覽區
+- [ ] 美工(配色、圖片等)
+
+######JavaScript功能
+- [ ] 預覽效果
+- [ ] 產生CSS語法
