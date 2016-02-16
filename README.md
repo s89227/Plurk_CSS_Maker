@@ -22,7 +22,6 @@ Create full CSS style sheet for Plurk.
 - [x] timeline_control.css
 - [x] dashboard_holder.css
 - [ ] form_holder.css
-- [ ] colorbox.css
 - [ ] GB_window.css
 - [ ] colorboxVideo.css
 - [ ] else.css
