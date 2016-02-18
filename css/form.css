@@ -1,0 +1,22 @@
+form{
+	text-align: left;
+}
+
+fieldset{
+	padding: 15px;
+	margin-left: 5px;
+	margin-right: 5px;
+	border-radius: 10px;
+}
+
+legend{
+	margin-left: 25px;
+}
+
+label::after{
+	content: "：";
+}
+
+.selected{
+	display: none;
+}

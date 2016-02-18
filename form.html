@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>使用者設定區</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/general.css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+
+
+</head>
+<body>
+	<main>
+		<nav id="nav"><ul>
+        	<a href="#home"><li>首頁</li></a>
+        	<a href="#doc"><li>文件</li></a>
+        	<a href="#maker"><li>生產器</li></a>
+        	<a href="#conect"><li>聯絡我們</li></a>
+    	</ul></nav>
+
+		<section id="maker">
+    		<ul id="tab_nav">
+    			<a href="#intro"><li>簡介</li></a>
+    			<a href="#all"><li>整體</li></a>
+        		<a href="#timeline"><li>河道</li></a>
+        		<a href="#dashboard"><li>個人面板</li></a>
+        		<a href="#message"><li>噗</li></a>
+    			<a href="#result"><li>產出的CSS</li></a>
+    		</ul>
+    		<div id="preview">
+    			預覽區
+    		</div>
+    		<section id="intro" class="tab" style="z-index: 1;"><div class="content">
+    			簡介
+    		</div></section>
+			<section id="all" class="tab"><div class="content">
+				<form>
+					<fieldset>
+						<legend>背景</legend>
+
+						<label>設定方式</label>
+						<input type="radio" name="sep_background" onclick="document.getElementById('timeline_background').style.display='none';" checked>統一背景
+						<input type="radio" name="sep_background" onclick="document.getElementById('timeline_background').style.display='block'">分開設定<br>
+
+						<label>統一設定</label>
+						<input type="radio" name="color_img" onclick="document.getElementById('bg_color').style.display='block';document.getElementById('bg_img').style.display='none';">純色背景
+						<input type="radio" name="color_img" onclick="document.getElementById('bg_img').style.display='block';document.getElementById('bg_color').style.display='none';">自訂圖片
+						<div id="all_background" style="display: block;">
+							<div id="bg_color" class="selected">
+								<label>背景顏色</label><input type="color" name="background_color"><br>
+							</div>
+							<div id="bg_img" class="selected">
+								<label>背景網址</label><input type="url" name="background_img">
+							</div>
+						</div>
+						
+						<div id="timeline_background" class="selected">
+							<label>河道設定</label>
+							<input type="radio" name="timeline_color_img" onclick="document.getElementById('timeline_color').style.display='block';document.getElementById('timeline_img').style.display='none';">純色背景
+							<input type="radio" name="timeline_color_img" onclick="document.getElementById('timeline_img').style.display='block';document.getElementById('timeline_color').style.display='none';">自訂圖片
+						</div>
+
+						<div id="timeline_color" class="selected">
+							<label>河道背景顏色</label><input type="color" name="background_color"><br>
+						</div>
+						<div id="timeline_img" class="selected">
+							<label>河道背景網址</label><input type="url" name="timeline_background_img">
+						</div>
+
+					</fieldset>
+					<fieldset>
+						<legend>其他</legend>
+
+						<label>隱藏廣告</label>
+						<input type="radio" name="ads" checked>是
+						<input type="radio" name="ads">否<br>
+
+						<label>讀取動畫</label>
+						<input type="radio" name="loading" onclick="document.getElementById('loading_img').style.display='none';" checked>預設
+						<input type="radio" name="loading" onclick="document.getElementById('loading_img').style.display='none';">隱藏
+						<input type="radio" name="loading" onclick="document.getElementById('loading_img').style.display='block';">自訂
+
+						<div id="loading_img" class="selected">
+							<label>圖片網址</label><input type="url" name="loading_img">
+						</div>
+					</fieldset>
+				</form>
+			</div></section>
+			<section id="timeline" class="tab"><div class="content">
+				河道
+			</div></section>
+			<section id="dashboard" class="tab"><div class="content">
+				個人面板
+			</div></section>
+			<section id="message" class="tab"><div class="content">
+				噗
+			</div></section>
+    		<section id="result" class="tab"><div class="content">
+    			產出的CSS
+    		</div></section>
+		</section>
+	</main>
+</body>
+</html>
