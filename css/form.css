@@ -17,6 +17,18 @@ label::after{
 	content: "：";
 }
 
+input[type="radio"]{
+	height: 2em;
+	width: 2em;
+}
+
+input[type="url"]{
+	background: rgba(255,255,255,0.7);
+	border-radius: 7px;
+	height: 2em;
+	width: 200px;
+}
+
 .selected{
 	display: none;
 }

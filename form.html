@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/general.css">
     <link rel="stylesheet" type="text/css" href="css/form.css">
-
+    <script language="JavaScript" src="js/form.js"></script>
 
 </head>
 <body>
@@ -40,12 +40,12 @@
 						<legend>背景</legend>
 
 						<label>設定方式</label>
-						<input type="radio" name="sep_background" onclick="document.getElementById('timeline_background').style.display='none';" checked>統一背景
-						<input type="radio" name="sep_background" onclick="document.getElementById('timeline_background').style.display='block'">分開設定<br>
+						<input type="radio" name="sep_background" onclick="changeDisplay('timeline_background', 'none')" checked>統一背景
+						<input type="radio" name="sep_background" onclick="changeDisplay('timeline_background', 'block')">分開設定<br>
 
 						<label>統一設定</label>
-						<input type="radio" name="color_img" onclick="document.getElementById('bg_color').style.display='block';document.getElementById('bg_img').style.display='none';">純色背景
-						<input type="radio" name="color_img" onclick="document.getElementById('bg_img').style.display='block';document.getElementById('bg_color').style.display='none';">自訂圖片
+						<input type="radio" name="color_img" onclick="changeDisplay('bg_color', 'block');changeDisplay('bg_img', 'none');">純色背景
+						<input type="radio" name="color_img" onclick="changeDisplay('bg_img', 'block');changeDisplay('bg_color', 'none');">自訂圖片
 						<div id="all_background" style="display: block;">
 							<div id="bg_color" class="selected">
 								<label>背景顏色</label><input type="color" name="background_color"><br>
@@ -57,8 +57,8 @@
 						
 						<div id="timeline_background" class="selected">
 							<label>河道設定</label>
-							<input type="radio" name="timeline_color_img" onclick="document.getElementById('timeline_color').style.display='block';document.getElementById('timeline_img').style.display='none';">純色背景
-							<input type="radio" name="timeline_color_img" onclick="document.getElementById('timeline_img').style.display='block';document.getElementById('timeline_color').style.display='none';">自訂圖片
+							<input type="radio" name="timeline_color_img" onclick="changeDisplay('timeline_color', 'block');changeDisplay('timeline_img', 'none');">純色背景
+							<input type="radio" name="timeline_color_img" onclick="changeDisplay('timeline_img', 'block');changeDisplay('timeline_color', 'none');">自訂圖片
 						</div>
 
 						<div id="timeline_color" class="selected">
@@ -77,24 +77,70 @@
 						<input type="radio" name="ads">否<br>
 
 						<label>讀取動畫</label>
-						<input type="radio" name="loading" onclick="document.getElementById('loading_img').style.display='none';" checked>預設
-						<input type="radio" name="loading" onclick="document.getElementById('loading_img').style.display='none';">隱藏
-						<input type="radio" name="loading" onclick="document.getElementById('loading_img').style.display='block';">自訂
+						<input type="radio" name="loading" onclick="changeDisplay('loading_img', 'none')" checked>預設
+						<input type="radio" name="loading" onclick="changeDisplay('loading_img', 'none')">隱藏
+						<input type="radio" name="loading" onclick="changeDisplay('loading_img', 'block')">自訂<br>
 
 						<div id="loading_img" class="selected">
 							<label>圖片網址</label><input type="url" name="loading_img">
 						</div>
+
+						<label>頁尾</label>
+						<input type="radio" name="footer" checked>隱藏
+						<input type="radio" name="footer">顯示
 					</fieldset>
 				</form>
 			</div></section>
 			<section id="timeline" class="tab"><div class="content">
-				河道
+				<form>
+					<fieldset>
+						<legend>整體設定</legend>
+					</fieldset>
+					<fieldset>
+						<legend>下方選單</legend>
+					</fieldset>
+					<fieldset>
+						<legend>時間軸</legend>
+					</fieldset>
+				</form>
 			</div></section>
 			<section id="dashboard" class="tab"><div class="content">
-				個人面板
+				<form>
+					<fieldset>
+						<legend>整體設定</legend>
+					</fieldset>
+					<fieldset>
+						<legend>發噗區</legend>
+					</fieldset>
+					<fieldset>
+						<legend>個人資料</legend>
+					</fieldset>
+					<fieldset>
+						<legend>自我介紹</legend>
+					</fieldset>
+					<fieldset>
+						<legend>統計</legend>
+					</fieldset>
+					<fieldset>
+						<legend>朋友</legend>
+					</fieldset>
+					<fieldset>
+						<legend>粉絲</legend>
+					</fieldset>
+					<fieldset>
+						<legend>勳章</legend>
+					</fieldset>
+				</form>
 			</div></section>
 			<section id="message" class="tab"><div class="content">
-				噗
+				<form>
+					<fieldset>
+						<legend>河道上的噗</legend>
+					</fieldset>
+					<fieldset>
+						<legend>點開的噗</legend>
+					</fieldset>
+				</form>
 			</div></section>
     		<section id="result" class="tab"><div class="content">
     			產出的CSS
