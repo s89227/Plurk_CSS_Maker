@@ -95,9 +95,108 @@
 				<form>
 					<fieldset>
 						<legend>整體設定</legend>
+
+						<label>噗浪獸</label>
+						<input type="radio" name="creature" onclick="changeDisplay('creature_img', 'none')" checked>預設
+						<input type="radio" name="creature" onclick="changeDisplay('creature_img', 'none')">隱藏
+						<input type="radio" name="creature" onclick="changeDisplay('creature_img', 'block')">自訂<br>
+
+						<div id="creature_img" class="selected">
+							<label>圖片網址</label><input type="url" name="creature_img">
+						</div>
+
+						<label>左方大箭頭</label><br>
+						<input type="radio" name="arrow_left" onclick="changeDisplay('arrow_left_color', 'none');changeDisplay('arrow_left_img', 'none');" checked>預設
+						<input type="radio" name="arrow_left" onclick="changeDisplay('arrow_left_color', 'none');changeDisplay('arrow_left_img', 'none');">隱藏
+						<input type="radio" name="arrow_left" onclick="changeDisplay('arrow_left_color', 'block');changeDisplay('arrow_left_img', 'none');">自訂顏色
+						<input type="radio" name="arrow_left" onclick="changeDisplay('arrow_left_color', 'none');changeDisplay('arrow_left_img', 'block');">自訂圖案<br>
+
+						<div id="arrow_left_color" class="selected">
+							<label>平時顏色</label><input type="color" name="arrow_left_color" value="#b9b0bf"><br>
+							<label>平時透明度</label><input type="number" name="arrow_left_opacity" value="0.7" step="0.01" max="1" min="0"><br>
+							<label>滑鼠在上時顏色</label><input type="color" name="arrow_left_hover_color" value="#b9b0bf"><br>
+							<label>滑鼠在上時透明度</label><input type="number" name="arrow_left_hover_opacity" value="0.7" step="0.01" max="1" min="0"><br>
+						</div>
+						<div id="arrow_left_img" class="selected">
+							<label>平時圖片網址</label><input type="url" name="arrow_left_img"><br>
+							<label>平時圖片透明度</label><input type="number" name="arrow_left_img_opacity" value="0.7" step="0.01" max="1" min="0"><br>
+							<label>滑鼠在上時圖片網址</label><input type="url" name="arrow_left_hover_img"><br>
+							<label>滑鼠在上時圖片透明度</label><input type="number" name="arrow_left_hover_img_opacity" value="0.7" step="0.01" max="1" min="0">
+						</div>
+
+						<label>右方大箭頭</label><br>
+						<input type="radio" name="arrow_right" onclick="changeDisplay('arrow_right_color', 'none');changeDisplay('arrow_right_img', 'none');" checked>預設
+						<input type="radio" name="arrow_right" onclick="changeDisplay('arrow_right_color', 'none');changeDisplay('arrow_right_img', 'none');">隱藏
+						<input type="radio" name="arrow_right" onclick="changeDisplay('arrow_right_color', 'block');changeDisplay('arrow_right_img', 'none');">自訂顏色
+						<input type="radio" name="arrow_right" onclick="changeDisplay('arrow_right_color', 'none');changeDisplay('arrow_right_img', 'block');">自訂圖案<br>
+
+						<div id="arrow_right_color" class="selected">
+							<label>平時顏色</label><input type="color" name="arrow_right_color" value="#b9b0bf"><br>
+							<label>平時透明度</label><input type="number" name="arrow_right_opacity" value="0.7" step="0.01" max="1" min="0"><br>
+							<label>滑鼠在上時顏色</label><input type="color" name="arrow_right_hover_color" value="#b9b0bf"><br>
+							<label>滑鼠在上時透明度</label><input type="number" name="arrow_right_hover_opacity" value="0.7" step="0.01" max="1" min="0"><br>
+						</div>
+						<div id="arrow_right_img" class="selected">
+							<label>平時圖片網址</label><input type="url" name="arrow_right_img"><br>
+							<label>平時圖片透明度</label><input type="number" name="arrow_right_img_opacity" value="0.7" step="0.01" max="1" min="0"><br>
+							<label>滑鼠在上時圖片網址</label><input type="url" name="arrow_right_hover_img"><br>
+							<label>滑鼠在上時圖片透明度</label><input type="number" name="arrow_right_hover_img_opacity" value="0.7" step="0.01" max="1" min="0">
+						</div>
+
+						<label>小箭頭(Begin)</label><br>
+						<input type="radio" name="arrow_small" onclick="changeDisplay('arrow_small_color', 'none');changeDisplay('arrow_small_img', 'none');" checked>預設
+						<input type="radio" name="arrow_small" onclick="changeDisplay('arrow_small_color', 'none');changeDisplay('arrow_small_img', 'none');">隱藏
+						<input type="radio" name="arrow_small" onclick="changeDisplay('arrow_small_color', 'block');changeDisplay('arrow_small_img', 'none');">自訂顏色
+						<input type="radio" name="arrow_small" onclick="changeDisplay('arrow_small_color', 'none');changeDisplay('arrow_small_img', 'block');">自訂圖案<br>
+
+						<div id="arrow_small_color" class="selected">
+							<label>平時顏色</label><input type="color" name="arrow_small_color" value="#b9b0bf"><br>
+							<label>平時透明度</label><input type="number" name="arrow_small_opacity" value="0.7" step="0.01" max="1" min="0"><br>
+							<label>滑鼠在上時顏色</label><input type="color" name="arrow_small_hover_color" value="#b9b0bf"><br>
+							<label>滑鼠在上時透明度</label><input type="number" name="arrow_small_hover_opacity" value="0.7" step="0.01" max="1" min="0"><br>
+						</div>
+						<div id="arrow_small_img" class="selected">
+							<label>平時圖片網址</label><input type="url" name="arrow_small_img"><br>
+							<label>平時圖片透明度</label><input type="number" name="arrow_small_img_opacity" value="0.7" step="0.01" max="1" min="0"><br>
+							<label>滑鼠在上時圖片網址</label><input type="url" name="arrow_small_hover_img"><br>
+							<label>滑鼠在上時圖片透明度</label><input type="number" name="arrow_small_hover_img_opacity" value="0.7" step="0.01" max="1" min="0">
+						</div>
+
+						<label>換日線</label><br>
+						<input type="radio" name="div_one_line" onclick="changeDisplay('div_one_line_color', 'none');changeDisplay('div_one_line_img', 'none');" checked>預設
+						<input type="radio" name="div_one_line" onclick="changeDisplay('div_one_line_color', 'none');changeDisplay('div_one_line_img', 'none');">隱藏
+						<input type="radio" name="div_one_line" onclick="changeDisplay('div_one_line_color', 'block');changeDisplay('div_one_line_img', 'none');">自訂顏色
+						<input type="radio" name="div_one_line" onclick="changeDisplay('div_one_line_color', 'none');changeDisplay('div_one_line_img', 'block');">自訂圖案<br>
+
+						<div id="div_one_line_color" class="selected">
+							<label>顏色</label><input type="color" name="div_one_line_color" value="#ffffff"><br>
+							<label>透明度</label><input type="number" name="div_one_line_opacity" value="1" step="0.01" max="1" min="0"><br>
+						</div>
+						<div id="div_one_line_img" class="selected">
+							<label>圖片網址</label><input type="color" name="arrow_small_color" value="#b9b0bf"><br>
+							<label>透明度</label><input type="number" name="arrow_small_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<label>重複</label>
+							<input type="radio" name="div_one_line_repeate" checked>不重複
+							<input type="radio" name="div_one_line_repeate">水平重複
+							<input type="radio" name="div_one_line_repeate">垂直重複<br>
+						</div>
 					</fieldset>
 					<fieldset>
 						<legend>下方選單</legend>
+
+						<label>展開方式</label><br>
+						<input type="radio" name="filter_tab_express" onclick="changeDisplay('updater_position', 'none')" checked>預設(左下方不展開)<br>
+						<input type="radio" name="filter_tab_express" onclick="changeDisplay('updater_position', 'none')">右下方不展開<br>
+						<input type="radio" name="filter_tab_express" onclick="changeDisplay('updater_position', 'none')">左下方強制垂直展開<br>
+						<input type="radio" name="filter_tab_express" onclick="changeDisplay('updater_position', 'block')">左下方強制水平展開<br>
+						<input type="radio" name="filter_tab_express" onclick="changeDisplay('updater_position', 'none')">右下方強制垂直展開<br>
+						<input type="radio" name="filter_tab_express" onclick="changeDisplay('updater_position', 'block')">右下方強制水平展開<br>
+
+						<div id="updater_position" class="selected">
+							<label>更新、已讀標籤位置</label><br>
+							<input type="radio" name="updater_position" checked>預設(左下方)
+							<input type="radio" name="updater_position">選單上方
+						</div>
 					</fieldset>
 					<fieldset>
 						<legend>時間軸</legend>
@@ -128,7 +227,7 @@
 						<legend>粉絲</legend>
 					</fieldset>
 					<fieldset>
-						<legend>勳章</legend>
+						<legend>徽章</legend>
 					</fieldset>
 				</form>
 			</div></section>

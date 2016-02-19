@@ -29,6 +29,10 @@ input[type="url"]{
 	width: 200px;
 }
 
+input[type="number"]{
+	width: 5em;
+}
+
 .selected{
 	display: none;
 }
