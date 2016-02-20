@@ -184,6 +184,18 @@
 					<fieldset>
 						<legend>下方選單</legend>
 
+						<label>顯示方式</label>
+						<input type="radio" name="filter_tab_show" onclick="changeDisplay('filter_tab_pure_icon', 'none');changeDisplayClass('subsetting', 'block');" checked>預設
+						<input type="radio" name="filter_tab_show" onclick="changeDisplay('filter_tab_pure_icon', 'block');changeDisplayClass('subsetting', 'none');">純圖示<br>
+
+						<div id="filter_tab_pure_icon" class="selected">
+							<label>圖示大小</label><input type="number" name="filter_tab_icon_size" value="5" step="1" max="20" min="1"><br>
+							<label>左上圓角</label><input type="number" name="filter_tab_icon_border_topleft" value="5" step="1" max="20" min="1"><br>
+							<label>右上圓角</label><input type="number" name="filter_tab_icon_border_topright" value="5" step="1" max="20" min="1"><br>
+							<label>左下圓角</label><input type="number" name="filter_tab_icon_border_bottomleft" value="5" step="1" max="20" min="1"><br>
+							<label>右下圓角</label><input type="number" name="filter_tab_icon_border_bottomright" value="5" step="1" max="20" min="1"><br>
+						</div>
+
 						<label>展開方式</label><br>
 						<input type="radio" name="filter_tab_express" onclick="changeDisplay('updater_position', 'none')" checked>預設(左下方不展開)<br>
 						<input type="radio" name="filter_tab_express" onclick="changeDisplay('updater_position', 'none')">右下方不展開<br>
@@ -196,6 +208,147 @@
 							<label>更新、已讀標籤位置</label><br>
 							<input type="radio" name="updater_position" checked>預設(左下方)
 							<input type="radio" name="updater_position">選單上方
+						</div>
+
+						<label>標籤底色、字色</label>
+						<input type="radio" name="filter_tab_color_setting" onclick="changeDisplay('filter_tab_color_all','block');changeDisplay('filter_tab_color_seperate','none');" checked>統一一色
+						<input type="radio" name="filter_tab_color_setting" onclick="changeDisplay('filter_tab_color_all','none');changeDisplay('filter_tab_color_seperate','block');">單獨設定
+
+						<div id="filter_tab_color_all" class="selected" style="display: block;">
+							<h3>背景</h3>
+							<label>平時顏色</label><input type="color" name="filter_tab_bg"><br>
+							<label>平時透明度</label><input type="number" name="filter_tab_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<label>滑鼠在上時顏色</label><input type="color" name="filter_tab_hover_bg"><br>
+							<label>滑鼠在上時透明度</label><input type="number" name="filter_tab_hover_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<div class="subsetting">
+								<h3>文字</h3>
+								<p>注意：修改文字顏色會同時修改圖示顏色，若要圖示和文字顏色不同，請在下方"圖示"部分設定</p>
+								<label>平時顏色</label><input type="color" name="filter_tab_bg"><br>
+								<label>滑鼠在上時顏色</label><input type="color" name="filter_tab_hover_bg"><br>
+							</div>
+						</div>
+						<div id="filter_tab_color_seperate" class="selected">
+							<p>注意：修改文字顏色會同時修改圖示顏色，若要圖示和文字顏色不同，請在下方"圖示"部分設定</p>
+							<h3>所有訊息</h3>
+							<label>平時背景顏色</label><input type="color" name="all_plurks_bg"><br>
+							<label>平時背景透明度</label><input type="number" name="all_plurks_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<label>滑鼠在上時背景顏色</label><input type="color" name="all_plurks_hover_bg"><br>
+							<label>滑鼠在上背景透明度</label><input type="number" name="all_plurks_hover_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<div class="subsetting">
+								<label>平時文字顏色</label><input type="color" name="all_plurks_color"><br>
+								<label>滑鼠在上時文字顏色</label><input type="color" name="all_plurks_hover_color"><br>
+							</div>
+							<h3>我發表的訊息</h3>
+							<label>平時背景顏色</label><input type="color" name="own_plurks_bg"><br>
+							<label>平時背景透明度</label><input type="number" name="own_plurks_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<label>滑鼠在上時背景顏色</label><input type="color" name="own_plurks_hover_bg"><br>
+							<label>滑鼠在上背景透明度</label><input type="number" name="own_plurks_hover_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<div class="subsetting">
+								<label>平時文字顏色</label><input type="color" name="own_plurks_color"><br>
+								<label>滑鼠在上時文字顏色</label><input type="color" name="own_plurks_hover_color"><br>
+							</div>
+							<h3>私人訊息</h3>
+							<label>平時背景顏色</label><input type="color" name="private_plurks_bg"><br>
+							<label>平時背景透明度</label><input type="number" name="private_plurks_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<label>滑鼠在上時顏色</label><input type="color" name="private_plurks_hover_bg"><br>
+							<label>滑鼠在上背景透明度</label><input type="number" name="private_plurks_hover_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<div class="subsetting">
+								<label>平時文字顏色</label><input type="color" name="private_plurks_color"><br>
+								<label>滑鼠在上時文字顏色</label><input type="color" name="private_plurks_hover_color"><br>
+							</div>
+							<h3>回應過的訊息</h3>
+							<label>平時背景顏色</label><input type="color" name="responded_plurks_bg"><br>
+							<label>平時背景透明度</label><input type="number" name="responded_plurks_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<label>滑鼠在上時顏色</label><input type="color" name="responded_plurks_hover_bg"><br>
+							<label>滑鼠在上背景透明度</label><input type="number" name="responded_plurks_hover_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<div class="subsetting">
+								<label>平時文字顏色</label><input type="color" name="responded_plurks_color"><br>
+								<label>滑鼠在上時文字顏色</label><input type="color" name="responded_plurks_hover_color"><br>
+							</div>
+							<h3>喜歡/轉噗的訊息</h3>
+							<label>平時背景顏色</label><input type="color" name="favorite_plurks_bg"><br>
+							<label>平時背景透明度</label><input type="number" name="favorite_plurks_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<label>滑鼠在上時顏色</label><input type="color" name="favorite_plurks_hover_bg"><br>
+							<label>滑鼠在上背景透明度</label><input type="number" name="favorite_plurks_hover_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<div class="subsetting">
+								<label>平時文字顏色</label><input type="color" name="favorite_plurks_color"><br>
+								<label>滑鼠在上時文字顏色</label><input type="color" name="favorite_plurks_hover_color"><br>
+							</div>
+							<h3>新訊息</h3>
+							<label>平時背景顏色</label><input type="color" name="noti_np_bg"><br>
+							<label>平時背景透明度</label><input type="number" name="noti_np_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<label>滑鼠在上時背景顏色</label><input type="color" name="noti_np_hover_bg"><br>
+							<label>滑鼠在上背景透明度</label><input type="number" name="noti_np_hover_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<div class="subsetting">
+								<label>平時文字顏色</label><input type="color" name="noti_np_color"><br>
+								<label>滑鼠在上時文字顏色</label><input type="color" name="noti_np_hover_color"><br>
+							</div>
+							<h3>新回應</h3>
+							<label>平時背景顏色</label><input type="color" name="noti_re_bg"><br>
+							<label>平時背景透明度</label><input type="number" name="noti_re_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<label>滑鼠在上時背景顏色</label><input type="color" name="noti_re_hover_bg"><br>
+							<label>滑鼠在上背景透明度</label><input type="number" name="noti_re_hover_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<div class="subsetting">
+								<label>平時文字顏色</label><input type="color" name="noti_re_color"><br>
+								<label>滑鼠在上時文字顏色</label><input type="color" name="noti_re_hover_color"><br>
+							</div>
+							<h3>全部標記為已讀</h3>
+							<label>平時背景顏色</label><input type="color" name="mark_all_link_bg"><br>
+							<label>平時背景透明度</label><input type="number" name="mark_all_link_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<label>滑鼠在上時背景顏色</label><input type="color" name="mark_all_link_hover_bg"><br>
+							<label>滑鼠在上背景透明度</label><input type="number" name="mark_all_link_hover_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<div class="subsetting">
+								<label>平時文字顏色</label><input type="color" name="mark_all_link_color"><br>
+								<label>滑鼠在上時文字顏色</label><input type="color" name="mark_all_link_hover_color"><br>
+							</div>
+							<h3>顯示所有訊息</h3>
+							<label>平時背景顏色</label><input type="color" name="cancel_bg"><br>
+							<label>平時背景透明度</label><input type="number" name="cancel_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<label>滑鼠在上時背景顏色</label><input type="color" name="cancel_hover_bg"><br>
+							<label>滑鼠在上背景透明度</label><input type="number" name="cancel_hover_opacity" value="1" step="0.01" max="1" min="0"><br>
+							<div class="subsetting">
+								<label>平時文字顏色</label><input type="color" name="cancel_color"><br>
+								<label>滑鼠在上時文字顏色</label><input type="color" name="cancel_hover_color"><br>
+							</div>
+						</div>
+
+						<p>若要自訂圖示，請選單獨設定</p>
+						<label>標籤圖示</label>
+						<input type="radio" name="filter_tab_icon" onclick="changeDisplay('filter_tab_icon_all','block');changeDisplay('filter_tab_icon_seperate','none');" checked>統一設定
+						<input type="radio" name="filter_tab_icon" onclick="changeDisplay('filter_tab_icon_all','none');changeDisplay('filter_tab_icon_seperate','block');">單獨設定
+
+						<div id="filter_tab_icon_all" class="selected">
+							<label>圖示顏色</label><input type="color" name="filter_tab_icon_color"><br>
+						</div>
+						<div id="filter_tab_icon_seperate" class="selected">
+							<p>注意：自訂圖示太大的話效果不佳</p>
+							<h3>所有訊息</h3>
+							<label>圖示顏色</label><input type="color" name="all_plurks_icon_color"><br>
+							<label>自訂圖示</label><input type="url" name="all_plurks_icon_img"><br>
+							<h3>我發表的訊息</h3>
+							<label>圖示顏色</label><input type="color" name="own_plurks_icon_color"><br>
+							<label>自訂圖示</label><input type="url" name="own_plurks_icon_img"><br>
+							<h3>私人訊息</h3>
+							<label>圖示顏色</label><input type="color" name="private_plurks_icon_color"><br>
+							<label>自訂圖示</label><input type="url" name="private_plurks_icon_img"><br>
+							<h3>訊息</h3>
+							<label>回應過的顏色</label><input type="color" name="responded_plurks_icon_color"><br>
+							<label>自訂圖示</label><input type="url" name="responded_plurks_icon_img"><br>
+							<h3>喜歡/轉噗的訊息</h3>
+							<label>圖示顏色</label><input type="color" name="favorite_plurks_icon_color"><br>
+							<label>自訂圖示</label><input type="url" name="favorite_plurks_icon_img"><br>
+							<h3>新訊息</h3>
+							<label>圖示顏色</label><input type="color" name="noti_np_icon_color"><br>
+							<label>自訂圖示</label><input type="url" name="noti_np_icon_img"><br>
+							<h3>新回應</h3>
+							<label>圖示顏色</label><input type="color" name="noti_rp_icon_color"><br>
+							<label>自訂圖示</label><input type="url" name="noti_rp_icon_img"><br>
+							<h3>全部標記為已讀</h3>
+							<label>圖示顏色</label><input type="color" name="mark_all_link_icon_color"><br>
+							<label>自訂圖示</label><input type="url" name="mark_all_link_icon_img"><br>
+							<h3>顯示所有訊息</h3>
+							<label>圖示顏色</label><input type="color" name="cancel_icon_color"><br>
+							<label>自訂圖示</label><input type="url" name="cancel_icon_img"><br>
 						</div>
 					</fieldset>
 					<fieldset>

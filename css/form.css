@@ -33,6 +33,16 @@ input[type="number"]{
 	width: 5em;
 }
 
+h3{
+	color: gold;
+	font-size: 0.9em;
+}
+
+p{
+	color: skyblue;
+	font-size: 0.8em;
+}
+
 .selected{
 	display: none;
 }
