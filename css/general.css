@@ -6,7 +6,7 @@
 body{
 	overflow-x: hidden;
     font-size: 2em;
-    background: skyblue;
+    background: #8da4d2;
     color: white;
 }
 main::after{
@@ -61,10 +61,11 @@ ul#tab_nav li{
 	display: inline-block;
 	width: calc(88vw/6);
 	border-radius: 15px;
-	background: blue;
+	background: #6d8ac5;
 }
 ul#tab_nav li:hover{
-	background: skyblue;
+	background: #ffc3c5;
+	color: #ff0008;
 }
 
 /*大分頁*/
@@ -100,17 +101,18 @@ section.tab{
 	left: 0;
 	height: auto;
 	min-height: 73vh;
-	background: green;
 	padding-top: 22vh;
 }
 section.tab:target{
 	z-index: 3;
 }
 .tab .content{
-	background: gray;
+	background: #ffc3c5;
+	color: #496db6;
 	height: 73vh;
 	overflow: auto;
 	width: 34vw;
+	font-size: 0.8em;
 }
 
 /*頁尾*/

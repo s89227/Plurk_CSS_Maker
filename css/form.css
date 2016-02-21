@@ -4,17 +4,26 @@ form{
 
 fieldset{
 	padding: 15px;
-	margin-left: 5px;
-	margin-right: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
 	border-radius: 10px;
 }
 
 legend{
 	margin-left: 25px;
+	color: #ff0008;
+}
+
+label{
+	color: #496db6;
+	font-size: 1.1em;
 }
 
 label::after{
 	content: "：";
+	color: #496db6;
+	font-size: 1.1em;
 }
 
 input[type="radio"]{
@@ -34,12 +43,12 @@ input[type="number"]{
 }
 
 h3{
-	color: gold;
-	font-size: 0.9em;
+	color: #ff333a;
+	font-size: 1.1em;
 }
 
 p{
-	color: skyblue;
+	color: #ff666b;
 	font-size: 0.8em;
 }
 
