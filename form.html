@@ -2,402 +2,152 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>使用者設定區</title>
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/general.css">
-    <link rel="stylesheet" type="text/css" href="css/form.css">
-    <script language="JavaScript" src="js/form.js"></script>
-
+	<title>Form</title>
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+	<script type="text/javascript" src="js/form.js"></script>
 </head>
 <body>
-	<main>
-		<nav id="nav"><ul>
-        	<a href="#home"><li>首頁</li></a>
-        	<a href="#doc"><li>文件</li></a>
-        	<a href="#maker"><li>生產器</li></a>
-        	<a href="#conect"><li>聯絡我們</li></a>
-    	</ul></nav>
+<form>
+	<section id="boardseting"><details>
+		<summary>版型</summary>
+			<button type="button" name="NormalBoard" id="NormalBoard" onclick="BoardSetting('NormalBoard');">Normal</button>
+			<button type="button" name="AllLeftBoard" id="AllLeftBoard" onclick="BoardSetting('AllLeftBoard');">All Left</button>
+			<button type="button" name="iconBottomBoard" id="iconBottomBoard" onclick="BoardSetting('iconBottomBoard');">icon Bottom</button>
+			<button type="button" name="iconLeftBoard" id="iconLeftBoard" onclick="BoardSetting('iconLeftBoard');">icon  Left</button>
+	</details></section>
 
-		<section id="maker">
-    		<ul id="tab_nav">
-    			<a href="#intro"><li>簡介</li></a>
-    			<a href="#all"><li>整體</li></a>
-        		<a href="#timeline"><li>河道</li></a>
-        		<a href="#dashboard"><li>個人面板</li></a>
-        		<a href="#message"><li>噗</li></a>
-    			<a href="#result"><li>產出的CSS</li></a>
-    		</ul>
-    		<div id="preview">
-    			預覽區
-    		</div>
-    		<section id="intro" class="tab" style="z-index: 1;"><div class="content">
-    			簡介
-    		</div></section>
-			<section id="all" class="tab"><div class="content">
-				<form>
-					<fieldset>
-						<legend>背景</legend>
+	<section id="background"><details>
+		<summary>背景</summary>
+			<div class="NormalBoard iconBottomBoard">
+				<button type="button" name="SameBackground" id="SameBackground" onclick="BackgroundSetting('SameBackground');">一起設定</button>
+				<button type="button" name="SeperateBackground" id="SeperateBackground" onclick="BackgroundSetting('SeperateBackground');">分開設定</button>
+			</div>
+			<details class="SeperateBackground SameBackground" style="display: none;">
+				<summary>河道背景</summary>
+					<details>
+						<summary>純色</summary>
+							<label>顏色</label><input type="color" name="TimelineBackgroundColor">
+							<label>透明度</label><input type="range" name="TimelineBackgroundOpacity">
+					</details>
+					<details>
+						<summary>圖片</summary>
+							<label>網址</label><input type="url" name="TimelineBackgroundUrl">
+					</details>
+			</details>
+			<details class="SeperateBackground" style="display: none;">
+				<summary>其他背景</summary>
+					<details class="SeperateBackground">
+						<summary>純色</summary>
+							<label>顏色</label><input type="color" name="BackgroundColor">
+							<label>透明度</label><input type="range" name="BackgroundOpacity">
+					</details>
+					<details class="SeperateBackground">
+						<summary>圖片</summary>
+							<label>網址</label><input type="url" name="BackgroundUrl">
+					</details>
+			</details>
+	</details></section>
 
-						<label>設定方式</label>
-						<input type="radio" name="sep_background" onclick="changeDisplay('timeline_background', 'none')" checked>統一背景
-						<input type="radio" name="sep_background" onclick="changeDisplay('timeline_background', 'block')">分開設定<br>
+	<section id="timeline"><details>
+		<summary>時間軸</summary>
+			<details>
+				<summary>細線</summary>
+					<button>預設</button>
+					<button>隱藏</button>
+					<button>自訂顏色、透明度或高度</button>
+					<button>自訂圖案</button>
+					<label>顏色</label><input type="color">
+					<label>透明度</label><input type="range">
+					<label>高度</label><input type="number">
+					<label>圖片網址</label><input type="url">
+					<label>圖片高度</label><input type="number">
+			</details>
+			<details>
+				<summary>時間方塊</summary>
+			</details>
+			<details>
+				<summary>選擇的噗的時間方塊</summary>
+			</details>
+	</details></section>
 
-						<label>統一設定</label>
-						<input type="radio" name="color_img" onclick="changeDisplay('bg_color', 'block');changeDisplay('bg_img', 'none');">純色背景
-						<input type="radio" name="color_img" onclick="changeDisplay('bg_img', 'block');changeDisplay('bg_color', 'none');">自訂圖片
-						<div id="all_background" style="display: block;">
-							<div id="bg_color" class="selected">
-								<label>背景顏色</label><input type="color" name="background_color"><br>
-							</div>
-							<div id="bg_img" class="selected">
-								<label>背景網址</label><input type="url" name="background_img">
-							</div>
-						</div>
-						
-						<div id="timeline_background" class="selected">
-							<label>河道設定</label>
-							<input type="radio" name="timeline_color_img" onclick="changeDisplay('timeline_color', 'block');changeDisplay('timeline_img', 'none');">純色背景
-							<input type="radio" name="timeline_color_img" onclick="changeDisplay('timeline_img', 'block');changeDisplay('timeline_color', 'none');">自訂圖片
-						</div>
+	<section id="filtertab"><details>
+		<summary>分頁籤</summary>
+			<details>
+				<summary>位置&展開</summary>
+			</details>
+			<details>
+				<summary>顏色</summary>
+			</details>
+			<details>
+				<summary>外框</summary>
+			</details>
+			<details>
+				<summary>icon</summary>
+			</details>
+	</details></section>
 
-						<div id="timeline_color" class="selected">
-							<label>河道背景顏色</label><input type="color" name="background_color"><br>
-						</div>
-						<div id="timeline_img" class="selected">
-							<label>河道背景網址</label><input type="url" name="timeline_background_img">
-						</div>
+	<section id="timeline"><details>
+		<summary>河道</summary>
+			<details>
+				<summary>換日線</summary>
+			</details>
+			<details>
+				<summary>噗浪獸</summary>
+			</details>
+			<details>
+				<summary>箭頭</summary>
+			</details>
+	</details></section>
 
-					</fieldset>
-					<fieldset>
-						<legend>其他</legend>
+	<section id="plurk"><details>
+		<summary>噗</summary>
+			<details>
+				<summary>未展開的噗</summary>
+			</details>
+			<details>
+				<summary>展開的噗</summary>
+			</details>
+	</details></section>
 
-						<label>隱藏廣告</label>
-						<input type="radio" name="ads" checked>是
-						<input type="radio" name="ads">否<br>
+	<section id="dashboard"><details>
+		<summary>面板</summary>
+			<details>
+				<summary>我</summary>
+			</details>
+			<details>
+				<summary>自介</summary>
+			</details>
+			<details>
+				<summary>發噗</summary>
+			</details>
+			<details>
+				<summary>統計</summary>
+			</details>
+			<details>
+				<summary>好友</summary>
+			</details>
+			<details>
+				<summary>粉絲</summary>
+			</details>
+			<details>
+				<summary>徽章</summary>
+			</details>
+	</details></section>
 
-						<label>讀取動畫</label>
-						<input type="radio" name="loading" onclick="changeDisplay('loading_img', 'none')" checked>預設
-						<input type="radio" name="loading" onclick="changeDisplay('loading_img', 'none')">隱藏
-						<input type="radio" name="loading" onclick="changeDisplay('loading_img', 'block')">自訂<br>
+	<section id="other"><details>
+		<summary>其他</summary>
+			<details>
+				<summary>廣告</summary>
+			</details>
+			<details>
+				<summary>頁尾</summary>
+			</details>
+			<details>
+				<summary>Loading圖示</summary>
+			</details>
+	</details></section>
 
-						<div id="loading_img" class="selected">
-							<label>圖片網址</label><input type="url" name="loading_img">
-						</div>
-
-						<label>頁尾</label>
-						<input type="radio" name="footer" checked>隱藏
-						<input type="radio" name="footer">顯示
-					</fieldset>
-				</form>
-			</div></section>
-			<section id="timeline" class="tab"><div class="content">
-				<form>
-					<fieldset>
-						<legend>整體設定</legend>
-
-						<label>噗浪獸</label>
-						<input type="radio" name="creature" onclick="changeDisplay('creature_img', 'none')" checked>預設
-						<input type="radio" name="creature" onclick="changeDisplay('creature_img', 'none')">隱藏
-						<input type="radio" name="creature" onclick="changeDisplay('creature_img', 'block')">自訂<br>
-
-						<div id="creature_img" class="selected">
-							<label>圖片網址</label><input type="url" name="creature_img">
-						</div>
-
-						<label>左方大箭頭</label><br>
-						<input type="radio" name="arrow_left" onclick="changeDisplay('arrow_left_color', 'none');changeDisplay('arrow_left_img', 'none');" checked>預設
-						<input type="radio" name="arrow_left" onclick="changeDisplay('arrow_left_color', 'none');changeDisplay('arrow_left_img', 'none');">隱藏
-						<input type="radio" name="arrow_left" onclick="changeDisplay('arrow_left_color', 'block');changeDisplay('arrow_left_img', 'none');">自訂顏色
-						<input type="radio" name="arrow_left" onclick="changeDisplay('arrow_left_color', 'none');changeDisplay('arrow_left_img', 'block');">自訂圖案<br>
-
-						<div id="arrow_left_color" class="selected">
-							<label>平時顏色</label><input type="color" name="arrow_left_color" value="#b9b0bf"><br>
-							<label>平時透明度</label><input type="number" name="arrow_left_opacity" value="0.7" step="0.01" max="1" min="0"><br>
-							<label>滑鼠在上時顏色</label><input type="color" name="arrow_left_hover_color" value="#b9b0bf"><br>
-							<label>滑鼠在上時透明度</label><input type="number" name="arrow_left_hover_opacity" value="0.7" step="0.01" max="1" min="0"><br>
-						</div>
-						<div id="arrow_left_img" class="selected">
-							<label>平時圖片網址</label><input type="url" name="arrow_left_img"><br>
-							<label>平時圖片透明度</label><input type="number" name="arrow_left_img_opacity" value="0.7" step="0.01" max="1" min="0"><br>
-							<label>滑鼠在上時圖片網址</label><input type="url" name="arrow_left_hover_img"><br>
-							<label>滑鼠在上時圖片透明度</label><input type="number" name="arrow_left_hover_img_opacity" value="0.7" step="0.01" max="1" min="0">
-						</div>
-
-						<label>右方大箭頭</label><br>
-						<input type="radio" name="arrow_right" onclick="changeDisplay('arrow_right_color', 'none');changeDisplay('arrow_right_img', 'none');" checked>預設
-						<input type="radio" name="arrow_right" onclick="changeDisplay('arrow_right_color', 'none');changeDisplay('arrow_right_img', 'none');">隱藏
-						<input type="radio" name="arrow_right" onclick="changeDisplay('arrow_right_color', 'block');changeDisplay('arrow_right_img', 'none');">自訂顏色
-						<input type="radio" name="arrow_right" onclick="changeDisplay('arrow_right_color', 'none');changeDisplay('arrow_right_img', 'block');">自訂圖案<br>
-
-						<div id="arrow_right_color" class="selected">
-							<label>平時顏色</label><input type="color" name="arrow_right_color" value="#b9b0bf"><br>
-							<label>平時透明度</label><input type="number" name="arrow_right_opacity" value="0.7" step="0.01" max="1" min="0"><br>
-							<label>滑鼠在上時顏色</label><input type="color" name="arrow_right_hover_color" value="#b9b0bf"><br>
-							<label>滑鼠在上時透明度</label><input type="number" name="arrow_right_hover_opacity" value="0.7" step="0.01" max="1" min="0"><br>
-						</div>
-						<div id="arrow_right_img" class="selected">
-							<label>平時圖片網址</label><input type="url" name="arrow_right_img"><br>
-							<label>平時圖片透明度</label><input type="number" name="arrow_right_img_opacity" value="0.7" step="0.01" max="1" min="0"><br>
-							<label>滑鼠在上時圖片網址</label><input type="url" name="arrow_right_hover_img"><br>
-							<label>滑鼠在上時圖片透明度</label><input type="number" name="arrow_right_hover_img_opacity" value="0.7" step="0.01" max="1" min="0">
-						</div>
-
-						<label>小箭頭(Begin)</label><br>
-						<input type="radio" name="arrow_small" onclick="changeDisplay('arrow_small_color', 'none');changeDisplay('arrow_small_img', 'none');" checked>預設
-						<input type="radio" name="arrow_small" onclick="changeDisplay('arrow_small_color', 'none');changeDisplay('arrow_small_img', 'none');">隱藏
-						<input type="radio" name="arrow_small" onclick="changeDisplay('arrow_small_color', 'block');changeDisplay('arrow_small_img', 'none');">自訂顏色
-						<input type="radio" name="arrow_small" onclick="changeDisplay('arrow_small_color', 'none');changeDisplay('arrow_small_img', 'block');">自訂圖案<br>
-
-						<div id="arrow_small_color" class="selected">
-							<label>平時顏色</label><input type="color" name="arrow_small_color" value="#b9b0bf"><br>
-							<label>平時透明度</label><input type="number" name="arrow_small_opacity" value="0.7" step="0.01" max="1" min="0"><br>
-							<label>滑鼠在上時顏色</label><input type="color" name="arrow_small_hover_color" value="#b9b0bf"><br>
-							<label>滑鼠在上時透明度</label><input type="number" name="arrow_small_hover_opacity" value="0.7" step="0.01" max="1" min="0"><br>
-						</div>
-						<div id="arrow_small_img" class="selected">
-							<label>平時圖片網址</label><input type="url" name="arrow_small_img"><br>
-							<label>平時圖片透明度</label><input type="number" name="arrow_small_img_opacity" value="0.7" step="0.01" max="1" min="0"><br>
-							<label>滑鼠在上時圖片網址</label><input type="url" name="arrow_small_hover_img"><br>
-							<label>滑鼠在上時圖片透明度</label><input type="number" name="arrow_small_hover_img_opacity" value="0.7" step="0.01" max="1" min="0">
-						</div>
-
-						<label>換日線</label><br>
-						<input type="radio" name="div_one_line" onclick="changeDisplay('div_one_line_color', 'none');changeDisplay('div_one_line_img', 'none');" checked>預設
-						<input type="radio" name="div_one_line" onclick="changeDisplay('div_one_line_color', 'none');changeDisplay('div_one_line_img', 'none');">隱藏
-						<input type="radio" name="div_one_line" onclick="changeDisplay('div_one_line_color', 'block');changeDisplay('div_one_line_img', 'none');">自訂顏色
-						<input type="radio" name="div_one_line" onclick="changeDisplay('div_one_line_color', 'none');changeDisplay('div_one_line_img', 'block');">自訂圖案<br>
-
-						<div id="div_one_line_color" class="selected">
-							<label>顏色</label><input type="color" name="div_one_line_color" value="#ffffff"><br>
-							<label>透明度</label><input type="number" name="div_one_line_opacity" value="1" step="0.01" max="1" min="0"><br>
-						</div>
-						<div id="div_one_line_img" class="selected">
-							<label>圖片網址</label><input type="color" name="arrow_small_color" value="#b9b0bf"><br>
-							<label>透明度</label><input type="number" name="arrow_small_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<label>重複</label>
-							<input type="radio" name="div_one_line_repeate" checked>不重複
-							<input type="radio" name="div_one_line_repeate">水平重複
-							<input type="radio" name="div_one_line_repeate">垂直重複<br>
-						</div>
-					</fieldset>
-					<fieldset>
-						<legend>下方選單</legend>
-
-						<label>顯示方式</label>
-						<input type="radio" name="filter_tab_show" onclick="changeDisplay('filter_tab_pure_icon', 'none');changeDisplayClass('subsetting', 'block');" checked>預設
-						<input type="radio" name="filter_tab_show" onclick="changeDisplay('filter_tab_pure_icon', 'block');changeDisplayClass('subsetting', 'none');">純圖示<br>
-
-						<div id="filter_tab_pure_icon" class="selected">
-							<label>圖示大小</label><input type="number" name="filter_tab_icon_size" value="5" step="1" max="20" min="1"><br>
-							<label>左上圓角</label><input type="number" name="filter_tab_icon_border_topleft" value="5" step="1" max="20" min="1"><br>
-							<label>右上圓角</label><input type="number" name="filter_tab_icon_border_topright" value="5" step="1" max="20" min="1"><br>
-							<label>左下圓角</label><input type="number" name="filter_tab_icon_border_bottomleft" value="5" step="1" max="20" min="1"><br>
-							<label>右下圓角</label><input type="number" name="filter_tab_icon_border_bottomright" value="5" step="1" max="20" min="1"><br>
-						</div>
-
-						<label>展開方式</label><br>
-						<input type="radio" name="filter_tab_express" onclick="changeDisplay('updater_position', 'none')" checked>預設(左下方不展開)<br>
-						<input type="radio" name="filter_tab_express" onclick="changeDisplay('updater_position', 'none')">右下方不展開<br>
-						<input type="radio" name="filter_tab_express" onclick="changeDisplay('updater_position', 'none')">左下方強制垂直展開<br>
-						<input type="radio" name="filter_tab_express" onclick="changeDisplay('updater_position', 'block')">左下方強制水平展開<br>
-						<input type="radio" name="filter_tab_express" onclick="changeDisplay('updater_position', 'none')">右下方強制垂直展開<br>
-						<input type="radio" name="filter_tab_express" onclick="changeDisplay('updater_position', 'block')">右下方強制水平展開<br>
-
-						<div id="updater_position" class="selected">
-							<label>更新、已讀標籤位置</label><br>
-							<input type="radio" name="updater_position" checked>預設(左下方)
-							<input type="radio" name="updater_position">選單上方
-						</div>
-
-						<label>標籤底色、字色</label>
-						<input type="radio" name="filter_tab_color_setting" onclick="changeDisplay('filter_tab_color_all','block');changeDisplay('filter_tab_color_seperate','none');" checked>統一一色
-						<input type="radio" name="filter_tab_color_setting" onclick="changeDisplay('filter_tab_color_all','none');changeDisplay('filter_tab_color_seperate','block');">單獨設定
-
-						<div id="filter_tab_color_all" class="selected" style="display: block;">
-							<h3>背景</h3>
-							<label>平時顏色</label><input type="color" name="filter_tab_bg"><br>
-							<label>平時透明度</label><input type="number" name="filter_tab_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<label>滑鼠在上時顏色</label><input type="color" name="filter_tab_hover_bg"><br>
-							<label>滑鼠在上時透明度</label><input type="number" name="filter_tab_hover_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<div class="subsetting">
-								<h3>文字</h3>
-								<p>注意：修改文字顏色會同時修改圖示顏色，若要圖示和文字顏色不同，請在下方"圖示"部分設定</p>
-								<label>平時顏色</label><input type="color" name="filter_tab_bg"><br>
-								<label>滑鼠在上時顏色</label><input type="color" name="filter_tab_hover_bg"><br>
-							</div>
-						</div>
-						<div id="filter_tab_color_seperate" class="selected">
-							<p>注意：修改文字顏色會同時修改圖示顏色，若要圖示和文字顏色不同，請在下方"圖示"部分設定</p>
-							<h3>所有訊息</h3>
-							<label>平時背景顏色</label><input type="color" name="all_plurks_bg"><br>
-							<label>平時背景透明度</label><input type="number" name="all_plurks_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<label>滑鼠在上時背景顏色</label><input type="color" name="all_plurks_hover_bg"><br>
-							<label>滑鼠在上背景透明度</label><input type="number" name="all_plurks_hover_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<div class="subsetting">
-								<label>平時文字顏色</label><input type="color" name="all_plurks_color"><br>
-								<label>滑鼠在上時文字顏色</label><input type="color" name="all_plurks_hover_color"><br>
-							</div>
-							<h3>我發表的訊息</h3>
-							<label>平時背景顏色</label><input type="color" name="own_plurks_bg"><br>
-							<label>平時背景透明度</label><input type="number" name="own_plurks_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<label>滑鼠在上時背景顏色</label><input type="color" name="own_plurks_hover_bg"><br>
-							<label>滑鼠在上背景透明度</label><input type="number" name="own_plurks_hover_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<div class="subsetting">
-								<label>平時文字顏色</label><input type="color" name="own_plurks_color"><br>
-								<label>滑鼠在上時文字顏色</label><input type="color" name="own_plurks_hover_color"><br>
-							</div>
-							<h3>私人訊息</h3>
-							<label>平時背景顏色</label><input type="color" name="private_plurks_bg"><br>
-							<label>平時背景透明度</label><input type="number" name="private_plurks_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<label>滑鼠在上時顏色</label><input type="color" name="private_plurks_hover_bg"><br>
-							<label>滑鼠在上背景透明度</label><input type="number" name="private_plurks_hover_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<div class="subsetting">
-								<label>平時文字顏色</label><input type="color" name="private_plurks_color"><br>
-								<label>滑鼠在上時文字顏色</label><input type="color" name="private_plurks_hover_color"><br>
-							</div>
-							<h3>回應過的訊息</h3>
-							<label>平時背景顏色</label><input type="color" name="responded_plurks_bg"><br>
-							<label>平時背景透明度</label><input type="number" name="responded_plurks_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<label>滑鼠在上時顏色</label><input type="color" name="responded_plurks_hover_bg"><br>
-							<label>滑鼠在上背景透明度</label><input type="number" name="responded_plurks_hover_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<div class="subsetting">
-								<label>平時文字顏色</label><input type="color" name="responded_plurks_color"><br>
-								<label>滑鼠在上時文字顏色</label><input type="color" name="responded_plurks_hover_color"><br>
-							</div>
-							<h3>喜歡/轉噗的訊息</h3>
-							<label>平時背景顏色</label><input type="color" name="favorite_plurks_bg"><br>
-							<label>平時背景透明度</label><input type="number" name="favorite_plurks_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<label>滑鼠在上時顏色</label><input type="color" name="favorite_plurks_hover_bg"><br>
-							<label>滑鼠在上背景透明度</label><input type="number" name="favorite_plurks_hover_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<div class="subsetting">
-								<label>平時文字顏色</label><input type="color" name="favorite_plurks_color"><br>
-								<label>滑鼠在上時文字顏色</label><input type="color" name="favorite_plurks_hover_color"><br>
-							</div>
-							<h3>新訊息</h3>
-							<label>平時背景顏色</label><input type="color" name="noti_np_bg"><br>
-							<label>平時背景透明度</label><input type="number" name="noti_np_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<label>滑鼠在上時背景顏色</label><input type="color" name="noti_np_hover_bg"><br>
-							<label>滑鼠在上背景透明度</label><input type="number" name="noti_np_hover_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<div class="subsetting">
-								<label>平時文字顏色</label><input type="color" name="noti_np_color"><br>
-								<label>滑鼠在上時文字顏色</label><input type="color" name="noti_np_hover_color"><br>
-							</div>
-							<h3>新回應</h3>
-							<label>平時背景顏色</label><input type="color" name="noti_re_bg"><br>
-							<label>平時背景透明度</label><input type="number" name="noti_re_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<label>滑鼠在上時背景顏色</label><input type="color" name="noti_re_hover_bg"><br>
-							<label>滑鼠在上背景透明度</label><input type="number" name="noti_re_hover_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<div class="subsetting">
-								<label>平時文字顏色</label><input type="color" name="noti_re_color"><br>
-								<label>滑鼠在上時文字顏色</label><input type="color" name="noti_re_hover_color"><br>
-							</div>
-							<h3>全部標記為已讀</h3>
-							<label>平時背景顏色</label><input type="color" name="mark_all_link_bg"><br>
-							<label>平時背景透明度</label><input type="number" name="mark_all_link_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<label>滑鼠在上時背景顏色</label><input type="color" name="mark_all_link_hover_bg"><br>
-							<label>滑鼠在上背景透明度</label><input type="number" name="mark_all_link_hover_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<div class="subsetting">
-								<label>平時文字顏色</label><input type="color" name="mark_all_link_color"><br>
-								<label>滑鼠在上時文字顏色</label><input type="color" name="mark_all_link_hover_color"><br>
-							</div>
-							<h3>顯示所有訊息</h3>
-							<label>平時背景顏色</label><input type="color" name="cancel_bg"><br>
-							<label>平時背景透明度</label><input type="number" name="cancel_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<label>滑鼠在上時背景顏色</label><input type="color" name="cancel_hover_bg"><br>
-							<label>滑鼠在上背景透明度</label><input type="number" name="cancel_hover_opacity" value="1" step="0.01" max="1" min="0"><br>
-							<div class="subsetting">
-								<label>平時文字顏色</label><input type="color" name="cancel_color"><br>
-								<label>滑鼠在上時文字顏色</label><input type="color" name="cancel_hover_color"><br>
-							</div>
-						</div>
-
-						<p>若要自訂圖示，請選單獨設定</p>
-						<label>標籤圖示</label>
-						<input type="radio" name="filter_tab_icon" onclick="changeDisplay('filter_tab_icon_all','block');changeDisplay('filter_tab_icon_seperate','none');" checked>統一設定
-						<input type="radio" name="filter_tab_icon" onclick="changeDisplay('filter_tab_icon_all','none');changeDisplay('filter_tab_icon_seperate','block');">單獨設定
-
-						<div id="filter_tab_icon_all" class="selected">
-							<label>圖示顏色</label><input type="color" name="filter_tab_icon_color"><br>
-						</div>
-						<div id="filter_tab_icon_seperate" class="selected">
-							<p>注意：自訂圖示太大的話效果不佳</p>
-							<h3>所有訊息</h3>
-							<label>圖示顏色</label><input type="color" name="all_plurks_icon_color"><br>
-							<label>自訂圖示</label><input type="url" name="all_plurks_icon_img"><br>
-							<h3>我發表的訊息</h3>
-							<label>圖示顏色</label><input type="color" name="own_plurks_icon_color"><br>
-							<label>自訂圖示</label><input type="url" name="own_plurks_icon_img"><br>
-							<h3>私人訊息</h3>
-							<label>圖示顏色</label><input type="color" name="private_plurks_icon_color"><br>
-							<label>自訂圖示</label><input type="url" name="private_plurks_icon_img"><br>
-							<h3>訊息</h3>
-							<label>回應過的顏色</label><input type="color" name="responded_plurks_icon_color"><br>
-							<label>自訂圖示</label><input type="url" name="responded_plurks_icon_img"><br>
-							<h3>喜歡/轉噗的訊息</h3>
-							<label>圖示顏色</label><input type="color" name="favorite_plurks_icon_color"><br>
-							<label>自訂圖示</label><input type="url" name="favorite_plurks_icon_img"><br>
-							<h3>新訊息</h3>
-							<label>圖示顏色</label><input type="color" name="noti_np_icon_color"><br>
-							<label>自訂圖示</label><input type="url" name="noti_np_icon_img"><br>
-							<h3>新回應</h3>
-							<label>圖示顏色</label><input type="color" name="noti_rp_icon_color"><br>
-							<label>自訂圖示</label><input type="url" name="noti_rp_icon_img"><br>
-							<h3>全部標記為已讀</h3>
-							<label>圖示顏色</label><input type="color" name="mark_all_link_icon_color"><br>
-							<label>自訂圖示</label><input type="url" name="mark_all_link_icon_img"><br>
-							<h3>顯示所有訊息</h3>
-							<label>圖示顏色</label><input type="color" name="cancel_icon_color"><br>
-							<label>自訂圖示</label><input type="url" name="cancel_icon_img"><br>
-						</div>
-					</fieldset>
-					<fieldset>
-						<legend>時間軸</legend>
-					</fieldset>
-				</form>
-			</div></section>
-			<section id="dashboard" class="tab"><div class="content">
-				<form>
-					<fieldset>
-						<legend>整體設定</legend>
-					</fieldset>
-					<fieldset>
-						<legend>發噗區</legend>
-					</fieldset>
-					<fieldset>
-						<legend>個人資料</legend>
-					</fieldset>
-					<fieldset>
-						<legend>自我介紹</legend>
-					</fieldset>
-					<fieldset>
-						<legend>統計</legend>
-					</fieldset>
-					<fieldset>
-						<legend>朋友</legend>
-					</fieldset>
-					<fieldset>
-						<legend>粉絲</legend>
-					</fieldset>
-					<fieldset>
-						<legend>徽章</legend>
-					</fieldset>
-				</form>
-			</div></section>
-			<section id="message" class="tab"><div class="content">
-				<form>
-					<fieldset>
-						<legend>河道上的噗</legend>
-					</fieldset>
-					<fieldset>
-						<legend>點開的噗</legend>
-					</fieldset>
-				</form>
-			</div></section>
-    		<section id="result" class="tab"><div class="content">
-    			產出的CSS
-    		</div></section>
-		</section>
-	</main>
+	<button type="button">產生CSS</button>
+</ul></form>
 </body>
 </html>

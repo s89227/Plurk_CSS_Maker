@@ -1,57 +1,11 @@
-form{
-	text-align: left;
+ul{
+	list-style: none;
 }
 
-fieldset{
-	padding: 15px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 10px;
-	border-radius: 10px;
+details button{
+	width: 100%;
 }
 
-legend{
-	margin-left: 25px;
-	color: #ff0008;
-}
-
-label{
-	color: #496db6;
-	font-size: 1.1em;
-}
-
-label::after{
-	content: "：";
-	color: #496db6;
-	font-size: 1.1em;
-}
-
-input[type="radio"]{
-	height: 2em;
-	width: 2em;
-}
-
-input[type="url"]{
-	background: rgba(255,255,255,0.7);
-	border-radius: 7px;
-	height: 2em;
-	width: 200px;
-}
-
-input[type="number"]{
-	width: 5em;
-}
-
-h3{
-	color: #ff333a;
-	font-size: 1.1em;
-}
-
-p{
-	color: #ff666b;
-	font-size: 0.8em;
-}
-
-.selected{
-	display: none;
+details details{
+	margin-left: 20px;
 }
